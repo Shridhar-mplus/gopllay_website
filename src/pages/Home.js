@@ -1,13 +1,26 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React from "react";
+import Slider from "react-slick";
 
 const Home = () => {
+  const settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
+
   return (
     <div>
-      <div class="Modern-Slider">
-        <div class="item">
-          <div class="img-fill">
+      <Slider {...settings} className="Modern-Slider">
+        <div className="item">
+          <div className="img-fill">
             <img src="https://i.imgur.com/JNKiMHU.jpg" alt="" />
-            <div class="info">
+            <div className="info">
               <div>
                 <h3>Full Width Slider With Layers</h3>
                 <h5>
@@ -19,11 +32,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <div class="img-fill">
+        <div className="item">
+          <div className="img-fill">
             <img src="https://i.imgur.com/ESMjChq.jpg" alt="" />
-            <div class="info">
+            <div className="info">
               <div>
                 <h3>Fully responsive Scales with its container</h3>
                 <h5>
@@ -35,11 +47,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <div class="img-fill">
+        <div className="item">
+          <div className="img-fill">
             <img src="https://i.imgur.com/TDxSvHH.jpg" alt="" />
-            <div class="info">
+            <div className="info">
               <div>
                 <h3>Awesome Transtions With CSS3</h3>
                 <h5>
@@ -51,23 +62,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <div class="img-fill">
-            <img src="https://i.imgur.com/p1XZ3Mu.jpg" alt="" />
-            <div class="info">
-              <div>
-                <h3>Separate settings per breakpoint</h3>
-                <h5>
-                  Donec id ornare dui. Aenean tristique condimentum elit, quis
-                  blandit nisl varius sit amet. Sed eleifend felis quis massa
-                  viverra
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </Slider>
     </div>
   );
 };

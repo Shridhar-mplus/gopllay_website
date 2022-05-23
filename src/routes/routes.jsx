@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 
-function Front_Routes() {
+function FrontRoutes() {
 
   return (
     <Router>
@@ -14,4 +14,4 @@ function Front_Routes() {
   );
 }
 
-export default Front_Routes;
+export default FrontRoutes;
