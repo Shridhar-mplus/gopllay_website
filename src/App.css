@@ -61,7 +61,7 @@
 }
 
 
-.nav-item:after {
+.nav-link:after {
   content: "";
   display: block;
   height: 3px;
@@ -70,7 +70,7 @@
   transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.nav-item:hover:after {
+.nav-link:hover:after {
   width: 100%;
   background: #ffdd40;
 }
@@ -80,7 +80,9 @@
   border: 1px solid #ffdd40;
 }
 
-
+.navbar-collapse{
+  flex-grow: unset !important;
+}
 
 
 
