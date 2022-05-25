@@ -40,8 +40,8 @@
 
 /* Navbar */
 .navbar {
-  background-color: #1f5156;
-  height: 80px;
+  background-color: #fff !important;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@
   transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.nav-link:hover:after {
+.nav-link.navMenu:hover:after {
   width: 100%;
   background: #ffdd40;
 }
@@ -84,7 +84,10 @@
   flex-grow: unset !important;
 }
 
-
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(32 45 70);
+  margin-left: 20px;
+}
 
 
 /* ==== Main CSS === */
@@ -135,9 +138,9 @@
 .Modern-Slider{
   overflow: hidden;
 }
-.Modern-Slider .item .img-fill{
-  height:100vh;
-  background:#000;
+.Modern-Slider .item .img-fill {
+  height: calc(100vh - 80px);
+  background: #000;
 }
 
 .Modern-Slider .item .img-fill .info{
@@ -147,17 +150,25 @@
   top:0px;
   left:0px;
   background:rgba(0,0,0,.50);
-  line-height:100vh;
+  /* line-height:100vh; */
   text-align:center;
+ 
 }
 
 .Modern-Slider .item .img-fill img{
-  filter:blur(5px);
+  /* filter:blur(5px); */
+  width: 100%;
 }
 
 .Modern-Slider .item .info > div{
-  display:inline-block!important;
+  display: flex !important;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
   vertical-align:middle;
+   padding: 110px 200px;
+   height: 100%;
+ 
 }
 
 .Modern-Slider .NextArrow{
@@ -221,13 +232,15 @@
   animation:ProgressDots 11s both;
 }
 
-.Modern-Slider .item h3{
-  font:30px/50px RalewayB;
-  text-transform:uppercase;
-  color:#FFF;
-  animation:fadeOutRight 1s both;
-  margin:0;
-  padding:0;
+.Modern-Slider .item h3 {
+  font: 30px/50px RalewayB;
+  text-transform: uppercase;
+  color: #FFF;
+  animation: fadeOutRight 1s both;
+  margin: 0px 0px 30px 0px;
+  padding: 0;
+  font-size: 50px;
+  font-weight: 900;
 }
 
 .Modern-Slider .item h5{
@@ -235,10 +248,11 @@
   padding:0;
   font:15px/30px RalewayR;
   color:#FFF;
-  max-width:600px;
+  /* max-width:600px; */
   overflow:hidden;
-  height:60px;
+  /* height:60px; */
   animation:fadeOutLeft 1s both;
+  margin-bottom: 20px;
 }
 
 .Modern-Slider .item.slick-active h3{
@@ -254,7 +268,12 @@
 }
 
 .Modern-Slider {background:#000;}
-
+.viewMore.nav-link {
+  background: linear-gradient(45deg, #014f8e, #032e62);
+  color: #fff;
+  border-radius: 20px;
+  border-bottom: 1px solid #59a4ff;
+}
 /* ==== Slider Image Transition === */
 @keyframes Slick-FastSwipeIn{
     0%{transform:rotate3d(0,1,0,150deg) scale(0)  perspective(400px);} 
@@ -277,3 +296,107 @@
 .slick-initialized .slick-slide{display:block}
 .slick-loading .slick-slide{visibility:hidden}
 .slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
+
+
+
+.videoBoxContainer{
+  height: 400px;
+  position: relative;
+}
+.videoBoxContainer .videoBox  {
+ 
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.videoBoxContainer .videoBox .iframe-box {
+  width: 60%;
+  height: 500px;
+  border-radius: 0px;
+  border: 3px solid #fff;
+  box-shadow: rgb(0 0 0 / 14%) 0px 10px 12px;
+  z-index: -2;
+  position: relative;
+}
+.videoBoxContainer .videoBox .iframe-box iframe{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+}
+.iframe-box:before {
+  content: "";
+  width: 270px;
+  height: 250px;
+  background: linear-gradient(45deg, #fef202, #fef314);
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  border-radius: 0px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 16px;
+}
+.iframe-box:after {
+  content: "";
+  width: 270px;
+  height: 250px;
+  background: linear-gradient(45deg, #fef202, #fef314);
+  position: absolute;
+  border-radius: 6px;
+  right: -15px;
+  bottom: -15px;
+  z-index: -1;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 16px;
+}
+
+.challenges-section{
+  padding: 80px 0px;
+  background: #fbfbfb;
+}
+.section-heading {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #014f8e;
+}
+.challenges-list {
+  background: #f1f1f1;
+  padding: 15px 20px;
+}
+.challengesBox {
+  /* height: 130px; */
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 5px;
+  /* border: 3px solid #162449; */
+  box-shadow: rgba(0 0 0/10%) 0px 0px 10px !important;
+  position: relative;
+  border-radius: 15px;
+}
+.challengesBox img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.challengesBox p{
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  
+}
