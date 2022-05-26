@@ -139,7 +139,7 @@
   overflow: hidden;
 }
 .Modern-Slider .item .img-fill {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 75px);
   background: #000;
 }
 
@@ -160,15 +160,15 @@
   width: 100%;
 }
 
-.Modern-Slider .item .info > div{
+.Modern-Slider .item .info > div {
   display: flex !important;
-  align-items: center;
-  /* justify-content: center; */
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
-  vertical-align:middle;
-   padding: 110px 200px;
-   height: 100%;
- 
+  vertical-align: inherit;
+  padding: 110px 590px 0px 140px;
+  height: 100%;
+  text-align: left;
 }
 
 .Modern-Slider .NextArrow{
@@ -399,4 +399,118 @@
   font-size: 18px;
   font-weight: 500;
   
+}
+
+
+
+
+/* Footer */
+.footer-dark {
+  padding:20px 0px 0px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:20px;
+  color: #fff;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+/* .footer-dark .item.text {
+  margin-bottom:36px;
+} */
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:left;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+  /* margin: 0 8px; */
+  color: #fff;
+  opacity: 0.75;
+  margin-right: 10px;
+
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+  
+}
+
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  background: #22272c;
+}
+.footer-dark .copyright a{
+  color: #fef202;
+}
+.slider-btn{
+  display: flex;
+}
+
+.play-video-btn {
+  background: linear-gradient(45deg, #fef202, #fff400) !important;
+  color: #14224b !important;
+  border-radius: 20px 20px 20px 20px !important;
+  margin-left: 25px !important;
+  padding: .5rem 1rem !important;
 }

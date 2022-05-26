@@ -70,6 +70,16 @@ hr {
   margin-bottom: 20px;
   border: 0;
 }
+
+
+.HeaderBgColor{
+  background: linear-gradient(312.55deg, #014F8E 10.28%, #0063B4 83.33%);
+
+}
+
+.HeaderBgColor .css-r6ewbb-MuiToolbar-root{
+  justify-content: space-between;
+}
 /* Navigation */
 .logo-img{
   width: 90px;
