@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
+import React, { useEffect } from "react";
+// import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
 import { Nav, Row, Col, Container } from "react-bootstrap";
 
@@ -13,9 +13,16 @@ import challengesTwo from "../assets/img/challenges/img-2.jpg";
 import challengesThree from "../assets/img/challenges/img-3.jpg";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import CloseIcon from "@mui/icons-material/Close";
+
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "react-awesome-slider/dist/styles.css";
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 const style = {
   position: "absolute",
   top: "50%",
@@ -27,16 +34,12 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+
 const Home = () => {
-  const settings = {
-    dots: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-  };
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -44,138 +47,149 @@ const Home = () => {
   return (
     <div>
       {/********** Slider Section Start ***********/}
-      <Slider {...settings} className="Modern-Slider">
-        <div className="item">
-          <div className="img-fill">
-            <AnimatePresence>
+      <AutoplaySlider
+        play={true}
+        cancelOnInteraction={false} // should stop playing on user interaction
+        interval={6000}
+        className="Modern-Slider"
+      >
+        <div>
+          <div className="item">
+            <div className="img-fill">
               <img src={BannerOne} alt="" />
-              <motion.div className="info">
-                <div>
-                  <h3>Why We Love Sports</h3>
-                  <h5>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam laboris nisi ut aliquip ex
-                    ea commodo consequat.
-                  </h5>
-                  <div className="slider-btn">
-                    <motion.span whileHover={{ scale: 0.9 }}>
-                      <Nav.Link href="/" className="viewMore">
-                        View More
-                      </Nav.Link>
-                    </motion.span>
-                    <motion.span whileHover={{ scale: 0.9 }}>
-                      <Button onClick={handleOpen} className="play-video-btn">
-                        <PlayCircleOutlineIcon /> Play Video
-                      </Button>
-                    </motion.span>
+              <AnimatePresence>
+                <motion.div className="info">
+                  <div>
+                    <h3 data-aos="zoom-in" data-aos-duration="1500">
+                      Why We Love Sports
+                    </h3>
+                    <h5 data-aos="fade-up" data-aos-duration="1500">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam laboris nisi ut aliquip ex
+                      ea commodo consequat.
+                    </h5>
+                    <div
+                      className="slider-btn"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      data-aos-duration="1500"
+                    >
+                      <motion.span whileHover={{ scale: 0.9 }}>
+                        <Nav.Link href="/" className="viewMore">
+                          View More
+                        </Nav.Link>
+                      </motion.span>
+                      <motion.span whileHover={{ scale: 0.9 }}>
+                        <Button onClick={handleOpen} className="play-video-btn">
+                          <PlayCircleOutlineIcon /> Play Video
+                        </Button>
+                      </motion.span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
-        <div className="item">
-          <div className="img-fill">
-            <AnimatePresence>
+        <div>
+          <div className="item">
+            <div className="img-fill">
               <img src={BannerTwo} alt="" />
-
-              <motion.div className="info">
-                <div>
-                  <h3>Why We Love Sports</h3>
-                  <h5>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam laboris nisi ut aliquip ex
-                    ea commodo consequat.
-                  </h5>
-                  <div className="slider-btn">
-                    <motion.span whileHover={{ scale: 0.9 }}>
-                      <Nav.Link href="/" className="viewMore">
-                        View More
-                      </Nav.Link>
-                    </motion.span>
-
-                    <motion.span whileHover={{ scale: 0.9 }}>
-                      <Button onClick={handleOpen} className="play-video-btn">
-                        <PlayCircleOutlineIcon /> Play Video
-                      </Button>
-                    </motion.span>
+              <AnimatePresence>
+                <motion.div className="info">
+                  <div>
+                    <h3 data-aos="zoom-in" data-aos-duration="1500">
+                      Why We Love Sports
+                    </h3>
+                    <h5 data-aos="fade-up" data-aos-duration="1500">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam laboris nisi ut aliquip ex
+                      ea commodo consequat.
+                    </h5>
+                    <div
+                      className="slider-btn"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      data-aos-duration="1500"
+                    >
+                      <motion.span whileHover={{ scale: 0.9 }}>
+                        <Nav.Link href="/" className="viewMore">
+                          View More
+                        </Nav.Link>
+                      </motion.span>
+                      <motion.span whileHover={{ scale: 0.9 }}>
+                        <Button onClick={handleOpen} className="play-video-btn">
+                          <PlayCircleOutlineIcon /> Play Video
+                        </Button>
+                      </motion.span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
-        <div className="item">
-          <div className="img-fill">
-            <AnimatePresence>
+        <div>
+          <div className="item">
+            <div className="img-fill">
               <img src={BannerThree} alt="" />
-              <motion.div className="info">
-                <div>
-                  <h3>Why We Love Sports</h3>
-                  <h5>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam laboris nisi ut aliquip ex
-                    ea commodo consequat.
-                  </h5>
-                  <div className="slider-btn">
-                    <motion.span whileHover={{ scale: 0.9 }}>
-                      <Nav.Link href="/" className="viewMore">
-                        View More
-                      </Nav.Link>
-                    </motion.span>{" "}
-                    <motion.span whileHover={{ scale: 0.9 }}>
-                      <Button onClick={handleOpen} className="play-video-btn">
-                        <PlayCircleOutlineIcon /> Play Video
-                      </Button>
-                    </motion.span>
+              <AnimatePresence>
+                <motion.div className="info">
+                  <div>
+                    <h3 data-aos="zoom-in" data-aos-duration="1500">
+                      Why We Love Sports
+                    </h3>
+                    <h5 data-aos="fade-up" data-aos-duration="1500">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam laboris nisi ut aliquip ex
+                      ea commodo consequat.
+                    </h5>
+                    <div
+                      className="slider-btn"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      data-aos-duration="1500"
+                    >
+                      <motion.span whileHover={{ scale: 0.9 }}>
+                        <Nav.Link href="/" className="viewMore">
+                          View More
+                        </Nav.Link>
+                      </motion.span>
+                      <motion.span whileHover={{ scale: 0.9 }}>
+                        <Button onClick={handleOpen} className="play-video-btn">
+                          <PlayCircleOutlineIcon /> Play Video
+                        </Button>
+                      </motion.span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
-      </Slider>
+      </AutoplaySlider>
+      {/********** Slider Section End ***********/}
 
+      {/* Video Modal start*/}
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+        <Box sx={{ ...style, width: 600, height: 400, padding: 0 }}>
+          <CloseIcon className="modalCloseBtn" onClick={handleClose} />
+          <iframe
+            src="https://www.youtube.com/embed/d-Hos3C8D5g?feature=oembed"
+            className="modalVideo"
+            title=""
+          ></iframe>
         </Box>
       </Modal>
-      {/********** Slider Section End ***********/}
-
-      {/********** Video Section Start ***********/}
-      {/* <div className="videoBoxContainer">
-        <motion.div
-          className="videoBox"
-          animate={{
-            x: 0,
-            y: -200,
-            scale: 1,
-            rotate: 0,
-          }}
-        >
-          <div className="iframe-box">
-            <iframe
-              src="https://www.youtube.com/embed/d-Hos3C8D5g?feature=oembed"
-              title="Video"
-            ></iframe>
-          </div>
-        </motion.div>
-      </div> */}
-      {/********** Slider Section End ***********/}
+      {/* Video Modal end*/}
 
       {/********** Challenges Section Start ***********/}
       <div className="challenges-section">
@@ -186,7 +200,7 @@ const Home = () => {
             </Col>
           </Row>
           <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
-            <Col xs={6} md={4}>
+            <Col xs={6} md={3} className="no-right">
               <div className="challenges-list">
                 <div className="challengesBox">
                   <img src={challengesOne} alt="Challenges" />
@@ -202,11 +216,42 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={6} md={8}></Col>
+            <Col xs={6} md={9} className="no-left">
+              <div className="challenges-box">
+                <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
+                  <Col xs={12} md={12}>
+                    <p className="main-title">
+                      Alternate Tap Challenge Badminton
+                    </p>
+                    <div className="challenges-description">
+                      <p>
+                        Maximum number of shuttle taps on the badminton racquet
+                        using alternate strokes (forehand, backhand and so
+                        forth) in 30 sec. without dropping the shuttle
+                      </p>
+                    </div>
+                    <div className="text-center">
+                      <iframe
+                        src="https://www.youtube.com/embed/d-Hos3C8D5g?feature=oembed"
+                        title=""
+                        width="500px"
+                        height="250px"
+                      ></iframe>
+                    </div>
+                  </Col>
+                  <Col xs={12} md={5}></Col>
+                </Row>
+                <div></div>
+              </div>
+            </Col>
           </Row>
         </Container>
       </div>
       {/********** Challenges Section End ***********/}
+
+      {/**********Quiz Section Start***********/}
+
+      {/**********Quiz Section Start***********/}
     </div>
   );
 };
