@@ -250,7 +250,15 @@ const Home = () => {
       {/********** Challenges Section End ***********/}
 
       {/**********Quiz Section Start***********/}
-
+      <div className="quiz-section">
+        <Container>
+          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
+            <Col xs={12} md={12}>
+              <h3 className="section-heading">Quiz</h3>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       {/**********Quiz Section Start***********/}
     </div>
   );
