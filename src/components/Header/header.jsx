@@ -38,7 +38,7 @@ export const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" className="HeaderBgColor">
+    <AppBar position="fixed" className="HeaderBgColor">
       <Container >
         <Toolbar disableGutters >
           

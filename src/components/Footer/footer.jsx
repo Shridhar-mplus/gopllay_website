@@ -2,18 +2,19 @@ import React from "react";
 import  logo  from "../../assets/img/logo.png";
 import {
     Box,
-    Container,
+    
     Row,
     Column,
     FooterLink,
     Heading,
 } from "./FooterStyles";
+import Container from "@mui/material/Container";
 
 export const Footer = () => {
     return (
         <div class="footer-dark">
         <footer>
-            <div class="container">
+            <Container>
                 <div class="row">
                 <div class="col-md-3 item text">
                         <h3><img src={logo} style={{width:"100px"}}/></h3>
@@ -46,7 +47,7 @@ export const Footer = () => {
                     
                 </div>
                 
-            </div>
+            </Container>
             <p class="copyright">Copyright © 2022 GoPllay All Rights Reserved. Designed By - <a href="#">Mplussoft</a></p>
         </footer>
     </div>

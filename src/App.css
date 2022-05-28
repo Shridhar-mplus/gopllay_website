@@ -139,7 +139,7 @@
   overflow: hidden;
 }
 .Modern-Slider .item .img-fill {
-  height: calc(100vh - 75px);
+  height: calc(100vh);
   background: #000;
 }
 
@@ -148,11 +148,11 @@
 
 .Modern-Slider .item .img-fill .info {
   position: absolute;
-  width: 60%;
+  width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  background: rgba(0,0,0,.50);
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 120%);
   /* line-height: 100vh; */
   text-align: center;
 }
@@ -167,7 +167,7 @@
   justify-content: center;
   flex-direction: column;
   vertical-align: inherit;
-  padding: 110px 100px 0px 140px;
+  padding: 110px 529px 0px 140px;
   height: 100%;
   text-align: left;
 }
@@ -275,6 +275,16 @@
   border-radius: 20px;
   border-bottom: 1px solid #59a4ff;
 }
+.awssld__controls button:hover .awssld__controls__arrow-right:before,
+.awssld__controls button:hover .awssld__controls__arrow-right:after {
+  
+  background: #fff;
+}
+.awssld__controls button:hover .awssld__controls__arrow-left:before,
+.awssld__controls button:hover .awssld__controls__arrow-left:after {
+ 
+  background: #fff;
+}
 .viewMore.nav-link::after{
   height: unset !important;
 }
@@ -290,7 +300,7 @@
 }
 
 .challenges-box{
-  background: #ebebeb;
+  background: #fff;
   padding: 15px 20px;
   height: 100%;
 }
@@ -389,18 +399,127 @@
 
 .challenges-section{
   padding: 80px 0px;
-  background: #fbfbfb;
+  background: url(./assets/img/banners/bg-img.jpg);
+}.quiz-section{
+  padding: 80px 0px;
+  background: #fff;
 }
+.without-white-bg{
+  background: rgb(249, 250, 251) !important;
+}
+
 .section-heading {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   text-align: center;
-  color: #014f8e;
+  color: #000;
+  position: relative;
+padding-bottom: 10px;
+}
+
+.animated-twin-lines:after, .animated-twin-lines:before {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  transition: all .3s linear;
+  -ms-animation-delay: 1s;
+  background: #000;
+}
+.animated-twin-lines:before {
+  animation: clip-one 1s linear infinite;
+  -moz-animation: clip-one 1s linear infinite;
+  -ms-animation: clip-one 1s linear infinite;
+  -webkit-animation: clip-one 1s linear infinite;
+  bottom: -2px;
+}
+.animated-twin-lines:after {
+  animation: clip-two 1.5s linear infinite;
+  -moz-animation: clip-two 1.5s linear infinite;
+  -ms-animation: clip-two 1.5s linear infinite;
+  -webkit-animation: clip-two 1.5s linear infinite;
+  bottom: 3px;
+}
+.animated-twin-lines:before{
+  background-color: #ffcc21;
+}
+.animated-twin-lines:after{
+  background-color: #165aa4;
+}
+@keyframes clip-one {
+  0%, 100% {
+      width: 50px
+  }
+  25% {
+      width: 20px
+  }
+  50% {
+      width: 40px
+  }
+  75% {
+      width: 25px
+  }
+}
+
+@-webkit-keyframes clip-one {
+  0%, 100% {
+      width: 50px
+  }
+  25% {
+      width: 20px
+  }
+  50% {
+      width: 40px
+  }
+  75% {
+      width: 25px
+  }
+}
+
+@keyframes clip-two {
+  0%, 100% {
+      width: 50px
+  }
+  25% {
+      width: 35px
+  }
+  50% {
+      width: 15px
+  }
+  75% {
+      width: 40px
+  }
+}
+
+@-moz-keyframes clip-two {
+  0%, 100% {
+      width: 50px
+  }
+  25% {
+      width: 35px
+  }
+  50% {
+      width: 15px
+  }
+  75% {
+      width: 40px
+  }
+}
+.cus-box-shadow{
+  box-shadow:rgb(0 0 0 / 10%) 0px 0px 5px;
 }
 .challenges-list {
-  background: #f1f1f1;
+  background: #f0f6ff;
   padding: 1px 15px;
 }
 .challengesBox {
@@ -412,9 +531,10 @@
   /* border: 3px solid #162449; */
   box-shadow: rgba(0 0 0/10%) 0px 0px 10px !important;
   position: relative;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   cursor: pointer;
   transition: transform 250ms;
+  /* border: 1px solid #cdcdcd; */
 }
 .challengesBox:hover{
   transform: translateY(-5px);
@@ -423,21 +543,21 @@
   width: 100%;
   height: 100px;
   object-fit: cover;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 .challengesBox p {
-  padding-top: 10px;
+  padding-top: 8px;
   padding-left: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-size: 14px;
   font-weight: 450;
   color: #1b2847;
 }
 
 .challenges-box p.main-title{
-  color: #000000;
+  color: #165aa4;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* Footer */
@@ -556,6 +676,37 @@
 .awssld__container {
   display: block;
   width: 100%;
-  height:  calc(100vh - 75px) !important;
+  height:  calc(100vh) !important;
   padding-bottom: 0px !important;
+}
+
+
+.quizBox{
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 43, 54);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-image: none;
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  z-index: 0;
+  box-shadow: rgba(145, 158, 171, 0.1) -8px 8px 24px -4px;
+  padding: 10px;
+}
+
+.quizBox:hover {
+  box-shadow: rgba(145, 158, 171, 0.24) -24px 24px 72px -8px;
+}
+.quizBox img{
+  height: 250px !important;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.quizBox p{
+  font-size: 18px;
+  margin-bottom: 0px;
+  padding: 10px 0px;
+  font-weight: 500;
+  color: #014f8e;
 }

@@ -1,9 +1,6 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect } from "react";
-// import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
-import { Nav, Row, Col, Container } from "react-bootstrap";
+import { Nav, Row, Col } from "react-bootstrap";
 
 import BannerOne from "../assets/img/home-banner-1.jpg";
 import BannerTwo from "../assets/img/home-banner-2.jpg";
@@ -11,12 +8,17 @@ import BannerThree from "../assets/img/home-banner-3.jpg";
 import challengesOne from "../assets/img/challenges/img-1.jpg";
 import challengesTwo from "../assets/img/challenges/img-2.jpg";
 import challengesThree from "../assets/img/challenges/img-3.jpg";
+
+import quizOne from "../assets/img/quiz/football.jpg";
+import quizTwo from "../assets/img/quiz/cricket.jpg";
+import quizThree from "../assets/img/quiz/basketball.jpg";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import CloseIcon from "@mui/icons-material/Close";
 
+import Container from "@mui/material/Container";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import AOS from "aos";
@@ -82,7 +84,7 @@ const Home = () => {
                       </motion.span>
                       <motion.span whileHover={{ scale: 0.9 }}>
                         <Button onClick={handleOpen} className="play-video-btn">
-                          <PlayCircleOutlineIcon /> Play Video
+                          <PlayCircleOutlineIcon /> Watch Video
                         </Button>
                       </motion.span>
                     </div>
@@ -121,7 +123,7 @@ const Home = () => {
                       </motion.span>
                       <motion.span whileHover={{ scale: 0.9 }}>
                         <Button onClick={handleOpen} className="play-video-btn">
-                          <PlayCircleOutlineIcon /> Play Video
+                          <PlayCircleOutlineIcon /> Watch Video
                         </Button>
                       </motion.span>
                     </div>
@@ -160,7 +162,7 @@ const Home = () => {
                       </motion.span>
                       <motion.span whileHover={{ scale: 0.9 }}>
                         <Button onClick={handleOpen} className="play-video-btn">
-                          <PlayCircleOutlineIcon /> Play Video
+                          <PlayCircleOutlineIcon /> Watch Video
                         </Button>
                       </motion.span>
                     </div>
@@ -196,12 +198,23 @@ const Home = () => {
         <Container>
           <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
             <Col xs={12} md={12}>
-              <h3 className="section-heading">Challenges</h3>
+              <h3
+                className="section-heading animated-twin-lines"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
+                Challenges
+              </h3>
             </Col>
           </Row>
-          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
-            <Col xs={6} md={3} className="no-right">
-              <div className="challenges-list">
+          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }} className="cus-box-shadow">
+            <Col xs={6} md={3} className="no-right no-left">
+              <div
+                className="challenges-list "
+                data-aos="fade-right"
+                data-aos-duration="1500"
+              >
                 <div className="challengesBox">
                   <img src={challengesOne} alt="Challenges" />
                   <p>Alternate Tap Challenge Badminton</p>
@@ -216,8 +229,12 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={6} md={9} className="no-left">
-              <div className="challenges-box">
+            <Col xs={6} md={9} className="no-left no-right">
+              <div
+                className="challenges-box"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+              >
                 <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
                   <Col xs={12} md={12}>
                     <p className="main-title">
@@ -225,21 +242,25 @@ const Home = () => {
                     </p>
                     <div className="challenges-description">
                       <p>
-                        Maximum number of shuttle taps on the badminton racquet
-                        using alternate strokes (forehand, backhand and so
-                        forth) in 30 sec. without dropping the shuttle
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur.
                       </p>
                     </div>
-                    <div className="text-center">
-                      <iframe
-                        src="https://www.youtube.com/embed/d-Hos3C8D5g?feature=oembed"
-                        title=""
-                        width="500px"
-                        height="250px"
-                      ></iframe>
-                    </div>
                   </Col>
-                  <Col xs={12} md={5}></Col>
                 </Row>
                 <div></div>
               </div>
@@ -250,11 +271,38 @@ const Home = () => {
       {/********** Challenges Section End ***********/}
 
       {/**********Quiz Section Start***********/}
-      <div className="quiz-section">
+      <div className="quiz-section without-white-bg">
         <Container>
           <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
             <Col xs={12} md={12}>
-              <h3 className="section-heading">Quiz</h3>
+              <h3
+                className="section-heading animated-twin-lines"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
+                Quiz
+              </h3>
+            </Col>
+          </Row>
+          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
+            <Col xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizOne} alt="" />
+                <p>Fifa Quiz</p>
+              </div>
+            </Col>
+            <Col xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizTwo} alt="" />
+                <p>Cricket Quiz</p>
+              </div>
+            </Col>
+            <Col xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizThree} alt="" />
+                <p>Basketball Quiz</p>
+              </div>
             </Col>
           </Row>
         </Container>
