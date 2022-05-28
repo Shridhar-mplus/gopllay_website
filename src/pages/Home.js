@@ -8,22 +8,24 @@ import BannerThree from "../assets/img/home-banner-3.jpg";
 import challengesOne from "../assets/img/challenges/img-1.jpg";
 import challengesTwo from "../assets/img/challenges/img-2.jpg";
 import challengesThree from "../assets/img/challenges/img-3.jpg";
-
 import quizOne from "../assets/img/quiz/football.jpg";
 import quizTwo from "../assets/img/quiz/cricket.jpg";
 import quizThree from "../assets/img/quiz/basketball.jpg";
+
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import CloseIcon from "@mui/icons-material/Close";
-
 import Container from "@mui/material/Container";
+
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
+import "react-awesome-slider/dist/styles.css";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "react-awesome-slider/dist/styles.css";
+
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 const style = {
   position: "absolute",
