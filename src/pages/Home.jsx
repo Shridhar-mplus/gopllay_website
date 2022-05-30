@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Nav, Row, Col } from "react-bootstrap";
 
 import BannerOne from "../assets/img/home-banner-1.jpg";
 import BannerTwo from "../assets/img/home-banner-2.jpg";
@@ -13,6 +12,8 @@ import quizTwo from "../assets/img/quiz/cricket.jpg";
 import quizThree from "../assets/img/quiz/basketball.jpg";
 
 import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
@@ -64,7 +65,7 @@ const Home = () => {
               <AnimatePresence>
                 <motion.div className="info">
                   <div>
-                    <h3 data-aos="zoom-in" data-aos-duration="1500">
+                    <h3 data-aos="fade-right" data-aos-duration="1500">
                       Why We Love Sports
                     </h3>
                     <h5 data-aos="fade-up" data-aos-duration="1500">
@@ -75,20 +76,20 @@ const Home = () => {
                     </h5>
                     <div
                       className="slider-btn"
+                      data-aos-offset="-100"
                       data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
                       data-aos-duration="1500"
                     >
-                      <motion.span whileHover={{ scale: 0.9 }}>
-                        <Nav.Link href="/" className="viewMore">
-                          View More
-                        </Nav.Link>
-                      </motion.span>
-                      <motion.span whileHover={{ scale: 0.9 }}>
+                      <motion.div whileHover={{ scale: 0.9 }}>
+                        <Link href="/" className="viewMore">
+                          VIEW MORE
+                        </Link>
+                      </motion.div>
+                      <motion.div whileHover={{ scale: 0.9 }}>
                         <Button onClick={handleOpen} className="play-video-btn">
                           <PlayCircleOutlineIcon /> Watch Video
                         </Button>
-                      </motion.span>
+                      </motion.div>
                     </div>
                   </div>
                 </motion.div>
@@ -103,7 +104,7 @@ const Home = () => {
               <AnimatePresence>
                 <motion.div className="info">
                   <div>
-                    <h3 data-aos="zoom-in" data-aos-duration="1500">
+                    <h3 data-aos="fade-right" data-aos-duration="1500">
                       Why We Love Sports
                     </h3>
                     <h5 data-aos="fade-up" data-aos-duration="1500">
@@ -114,20 +115,20 @@ const Home = () => {
                     </h5>
                     <div
                       className="slider-btn"
+                      data-aos-offset="-100"
                       data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
                       data-aos-duration="1500"
                     >
-                      <motion.span whileHover={{ scale: 0.9 }}>
-                        <Nav.Link href="/" className="viewMore">
-                          View More
-                        </Nav.Link>
-                      </motion.span>
-                      <motion.span whileHover={{ scale: 0.9 }}>
+                      <motion.div whileHover={{ scale: 0.9 }}>
+                        <Link href="/" className="viewMore">
+                          VIEW MORE
+                        </Link>
+                      </motion.div>
+                      <motion.div whileHover={{ scale: 0.9 }}>
                         <Button onClick={handleOpen} className="play-video-btn">
                           <PlayCircleOutlineIcon /> Watch Video
                         </Button>
-                      </motion.span>
+                      </motion.div>
                     </div>
                   </div>
                 </motion.div>
@@ -142,7 +143,7 @@ const Home = () => {
               <AnimatePresence>
                 <motion.div className="info">
                   <div>
-                    <h3 data-aos="zoom-in" data-aos-duration="1500">
+                    <h3 data-aos="fade-right" data-aos-duration="1500">
                       Why We Love Sports
                     </h3>
                     <h5 data-aos="fade-up" data-aos-duration="1500">
@@ -153,20 +154,20 @@ const Home = () => {
                     </h5>
                     <div
                       className="slider-btn"
+                      data-aos-offset="-100"
                       data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
                       data-aos-duration="1500"
                     >
-                      <motion.span whileHover={{ scale: 0.9 }}>
-                        <Nav.Link href="/" className="viewMore">
-                          View More
-                        </Nav.Link>
-                      </motion.span>
-                      <motion.span whileHover={{ scale: 0.9 }}>
+                      <motion.div whileHover={{ scale: 0.9 }}>
+                        <Link href="/" className="viewMore">
+                          VIEW MORE
+                        </Link>
+                      </motion.div>
+                      <motion.div whileHover={{ scale: 0.9 }}>
                         <Button onClick={handleOpen} className="play-video-btn">
                           <PlayCircleOutlineIcon /> Watch Video
                         </Button>
-                      </motion.span>
+                      </motion.div>
                     </div>
                   </div>
                 </motion.div>
@@ -184,7 +185,7 @@ const Home = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={{ ...style, width: 600, height: 400, padding: 0 }}>
+        <Box sx={{ ...style, width: 650, height: 450, padding: 0 }}>
           <CloseIcon className="modalCloseBtn" onClick={handleClose} />
           <iframe
             src="https://www.youtube.com/embed/d-Hos3C8D5g?feature=oembed"
@@ -198,20 +199,22 @@ const Home = () => {
       {/********** Challenges Section Start ***********/}
       <div className="challenges-section">
         <Container>
-          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
-            <Col xs={12} md={12}>
+        <Grid container spacing={0} >
+            <Grid item xs={12} md={12}>
               <h3
                 className="section-heading animated-twin-lines"
-                data-aos="fade-down"
+                data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1000"
+                data-aos-duration="800"
               >
                 Challenges
               </h3>
-            </Col>
-          </Row>
-          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }} className="cus-box-shadow">
-            <Col xs={6} md={3} className="no-right no-left">
+            </Grid>
+          </Grid>
+          <Grid container spacing={0} 
+            className="cus-box-shadow mb-20px"
+          >
+            <Grid item  xs={6} md={3} className="no-right no-left">
               <div
                 className="challenges-list "
                 data-aos="fade-right"
@@ -230,15 +233,15 @@ const Home = () => {
                   <p>Basketball Single Hand Dribble Challenge</p>
                 </div>
               </div>
-            </Col>
-            <Col xs={6} md={9} className="no-left no-right">
+            </Grid>
+            <Grid item  xs={6} md={9} className="no-left no-right">
               <div
                 className="challenges-box"
                 data-aos="fade-left"
                 data-aos-duration="1500"
               >
-                <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
-                  <Col xs={12} md={12}>
+                <Grid container spacing={0} >
+                  <Grid item  xs={12} md={12}>
                     <p className="main-title">
                       Alternate Tap Challenge Badminton
                     </p>
@@ -262,12 +265,24 @@ const Home = () => {
                         fugiat nulla pariatur.
                       </p>
                     </div>
-                  </Col>
-                </Row>
+                  </Grid>
+                </Grid>
                 <div></div>
               </div>
-            </Col>
-          </Row>
+            </Grid>
+          </Grid>
+          <AnimatePresence>
+            <div className="view_more_btn_box">
+              <motion.div
+                whileHover={{ scale: 0.9 }}
+                className="d-inline-block"
+              >
+                <Link href="/" className="viewMore">
+                  VIEW ALL
+                </Link>
+              </motion.div>
+            </div>
+          </AnimatePresence>
         </Container>
       </div>
       {/********** Challenges Section End ***********/}
@@ -275,38 +290,65 @@ const Home = () => {
       {/**********Quiz Section Start***********/}
       <div className="quiz-section without-white-bg">
         <Container>
-          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
-            <Col xs={12} md={12}>
+          <Grid container spacing={0} >
+            <Grid item  xs={12} md={12}>
               <h3
                 className="section-heading animated-twin-lines"
-                data-aos="fade-down"
+                data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1000"
+                data-aos-duration="800"
               >
                 Quiz
               </h3>
-            </Col>
-          </Row>
-          <Row xs={{ gutter: 0 }} md={{ gutter: 0 }}>
-            <Col xs={6} md={4}>
-              <div className="quizBox">
+            </Grid>
+          </Grid>
+          <Grid container spacing={0} className="mb-20px">
+            <Grid item  xs={6} md={4}>
+              <div
+                className="quizBox"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-delay="800"
+              >
                 <img src={quizOne} alt="" />
                 <p>Fifa Quiz</p>
               </div>
-            </Col>
-            <Col xs={6} md={4}>
-              <div className="quizBox">
+            </Grid>
+            <Grid item  xs={6} md={4}>
+              <div
+                className="quizBox"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-delay="1000"
+              >
                 <img src={quizTwo} alt="" />
                 <p>Cricket Quiz</p>
               </div>
-            </Col>
-            <Col xs={6} md={4}>
-              <div className="quizBox">
+            </Grid>
+            <Grid item  xs={6} md={4}>
+              <div
+                className="quizBox"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-delay="1200"
+              >
                 <img src={quizThree} alt="" />
                 <p>Basketball Quiz</p>
               </div>
-            </Col>
-          </Row>
+            </Grid>
+          </Grid>
+          <AnimatePresence>
+            <motion.div className="view_more_btn_box">
+              <motion.div
+                whileHover={{ scale: 0.9 }}
+                className="d-inline-block"
+              >
+                <Link href="/" className="viewMore">
+                  VIEW ALL
+                </Link>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
         </Container>
       </div>
       {/**********Quiz Section Start***********/}
