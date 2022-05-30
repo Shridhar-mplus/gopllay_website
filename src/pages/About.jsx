@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import Container from "@mui/material/Container";
 import Banner from "../assets/img/banners/bg-planet.jpg";
-import particle from "../assets/img/prarticle.svg";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 const About = () => {
@@ -324,7 +321,7 @@ const About = () => {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb breadcrumb-dark justify-content-center bg-transparent small mb-0">
                   <li className="breadcrumb-item">
-                    <a href="#">Home</a>
+                    <Link href="#">Home</Link>
                   </li>
                   <li
                     className="breadcrumb-item active d-none d-md-block"
