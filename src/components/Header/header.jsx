@@ -13,10 +13,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Link from "@mui/material/Link";
 
 const pages = [
-  { name: "Home", path: "" },
-  { name: "About", path: "about" },
-  { name: "Challeges", path: "" },
-  { name: "Quiz", path: "" },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Challeges", path: "#" },
+  { name: "Quiz", path: "#" },
+  { name: "Contact", path: "#" },
 ];
 
 export const ResponsiveAppBar = () => {
