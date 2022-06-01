@@ -1497,7 +1497,8 @@ img, svg {
 .about-section,
 .our-team-section,
 .our-champion-section,
-.new-challenges-section {
+.new-challenges-section,
+.contact-section {
   padding: 80px 0px;
 }
 .section-heading.text-left{
@@ -1651,4 +1652,30 @@ a.bg-secondary:hover {
 }
 .video-box:hover {
   transform: translateY(-10px);
+}
+.form-control:focus {
+  color: #718096;
+  background-color: #fff;
+  border-color: #8099e6;
+  outline: 0;
+  box-shadow: unset;
+}
+.no-margin-left{
+  margin-left: 0px !important;
+}
+.icon-lg {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.bg-primary-soft {
+  background-color: rgba(0, 51, 204, 0.1);
+}
+.separated > * {
+  box-shadow: -1px -1px 0px 0px #e2e8f0;
 }

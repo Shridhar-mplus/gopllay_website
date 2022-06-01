@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Challenges from "../pages/Challenges";
 import Quiz from "../pages/Quiz";
+import Contact from "../pages/Contact";
 
 function FrontRoutes() {
   return (
@@ -12,6 +13,7 @@ function FrontRoutes() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/challenges" element={<Challenges />} />
         <Route exact path="/quiz" element={<Quiz />} />
+        <Route exact path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

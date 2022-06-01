@@ -17,7 +17,7 @@ const pages = [
   { name: "About", path: "/about" },
   { name: "Challeges", path: "/challenges" },
   { name: "Quiz", path: "/quiz" },
-  { name: "Contact", path: "#" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export const ResponsiveAppBar = () => {

@@ -48,7 +48,7 @@ export const Footer = () => {
               <h3>Other Links</h3>
               <ul>
                 <li>
-                  <Link href="#">Contact Us</Link>
+                  <Link href="/contact">Contact Us</Link>
                 </li>
                 <li>
                   <Link href="#">Terms And Condition</Link>
