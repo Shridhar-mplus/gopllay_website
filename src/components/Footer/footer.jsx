@@ -1,13 +1,5 @@
 import React from "react";
 import logo from "../../assets/img/logo.png";
-// import {
-//     Box,
-//     Row,
-//     Column,
-//     FooterLink,
-//     Heading,
-// } from "./FooterStyles";
-
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";

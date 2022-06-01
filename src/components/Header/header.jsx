@@ -65,7 +65,7 @@ export const ResponsiveAppBar = () => {
               textDecoration: "none",
             }}
           >
-            <img src={logo} width="100px" />
+            <img src={logo} width="100px" alt="logo" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -123,7 +123,7 @@ export const ResponsiveAppBar = () => {
               textDecoration: "none",
             }}
           >
-            <img src={logo} width="100px" />
+            <img src={logo} width="100px" alt="logo" />
           </Typography>
           <Box sx={{ display: { xs: "none", md: "flex" }, textAlign: "right" }}>
             {pages.map((page) => (

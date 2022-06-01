@@ -1,9 +1,6 @@
 import React from "react";
 
 import Banner from "../assets/img/banners/bg-planet.jpg";
-import AboutImg from "../assets/img/about/about.svg";
-import TeamImg from "../assets/img/team/team-2.jpg";
-
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -463,9 +460,7 @@ const Contact = () => {
                               whileHover={{ scale: 0.9 }}
                               className="d-inline-block"
                             >
-                              <Link href="/" className="viewMore">
-                                Submit
-                              </Link>
+                              <Button className="viewMore">Submit</Button>
                             </motion.div>
                           </div>
                         </AnimatePresence>
@@ -478,6 +473,7 @@ const Contact = () => {
                     className="min-vh-50 w-100 m-0 align-top grayscale"
                     width="100%"
                     height="100%"
+                    title="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843821917424!2d144.956054!3d-37.817127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1427947693651"
                   ></iframe>
                 </Grid>
