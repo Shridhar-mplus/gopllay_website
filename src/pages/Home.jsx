@@ -13,7 +13,7 @@ import quizThree from "../assets/img/quiz/basketball.jpg";
 
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid"
+import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
@@ -190,7 +190,7 @@ const Home = () => {
           <iframe
             src="https://www.youtube.com/embed/d-Hos3C8D5g?feature=oembed"
             className="modalVideo"
-            title=""
+            title="video"
           ></iframe>
         </Box>
       </Modal>
@@ -199,7 +199,7 @@ const Home = () => {
       {/********** Challenges Section Start ***********/}
       <div className="challenges-section">
         <Container>
-        <Grid container spacing={0} >
+          <Grid container spacing={0}>
             <Grid item xs={12} md={12}>
               <h3
                 className="section-heading animated-twin-lines"
@@ -211,10 +211,8 @@ const Home = () => {
               </h3>
             </Grid>
           </Grid>
-          <Grid container spacing={0} 
-            className="cus-box-shadow mb-20px"
-          >
-            <Grid item  xs={6} md={3} className="no-right no-left">
+          <Grid container spacing={0} className="cus-box-shadow mb-20px">
+            <Grid item xs={6} md={3} className="no-right no-left">
               <div
                 className="challenges-list "
                 data-aos="fade-right"
@@ -234,14 +232,14 @@ const Home = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item  xs={6} md={9} className="no-left no-right">
+            <Grid item xs={6} md={9} className="no-left no-right">
               <div
                 className="challenges-box"
                 data-aos="fade-left"
                 data-aos-duration="1500"
               >
-                <Grid container spacing={0} >
-                  <Grid item  xs={12} md={12}>
+                <Grid container spacing={0}>
+                  <Grid item xs={12} md={12}>
                     <p className="main-title">
                       Alternate Tap Challenge Badminton
                     </p>
@@ -290,8 +288,8 @@ const Home = () => {
       {/**********Quiz Section Start***********/}
       <div className="quiz-section without-white-bg">
         <Container>
-          <Grid container spacing={0} >
-            <Grid item  xs={12} md={12}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} md={12}>
               <h3
                 className="section-heading animated-twin-lines"
                 data-aos="zoom-in"
@@ -302,8 +300,8 @@ const Home = () => {
               </h3>
             </Grid>
           </Grid>
-          <Grid container spacing={0} className="mb-20px">
-            <Grid item  xs={6} md={4}>
+          <Grid container spacing={2} className="mb-20px">
+            <Grid item xs={6} md={4}>
               <div
                 className="quizBox"
                 data-aos="fade-up"
@@ -314,7 +312,7 @@ const Home = () => {
                 <p>Fifa Quiz</p>
               </div>
             </Grid>
-            <Grid item  xs={6} md={4}>
+            <Grid item xs={6} md={4}>
               <div
                 className="quizBox"
                 data-aos="fade-up"
@@ -325,7 +323,7 @@ const Home = () => {
                 <p>Cricket Quiz</p>
               </div>
             </Grid>
-            <Grid item  xs={6} md={4}>
+            <Grid item xs={6} md={4}>
               <div
                 className="quizBox"
                 data-aos="fade-up"

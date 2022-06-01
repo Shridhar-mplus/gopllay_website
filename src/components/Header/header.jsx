@@ -15,8 +15,8 @@ import Link from "@mui/material/Link";
 const pages = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Challeges", path: "#" },
-  { name: "Quiz", path: "#" },
+  { name: "Challeges", path: "/challenges" },
+  { name: "Quiz", path: "/quiz" },
   { name: "Contact", path: "#" },
 ];
 

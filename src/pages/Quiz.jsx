@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Banner from "../assets/img/banners/bg-planet.jpg";
-import challengesOne from "../assets/img/challenges/table-tennis.png";
-import challengesTwo from "../assets/img/challenges/two-racket-tennis-ball-2.png";
-import challengesThree from "../assets/img/challenges/Badminton.png";
-import challengesFour from "../assets/img/challenges/cricket-bat-ball.png";
-import challengesFive from "../assets/img/challenges/bat-ball.png";
-import challengesSix from "../assets/img/challenges/basketball-new.jpeg";
+import quizOne from "../assets/img/quiz/football.jpg";
+import quizTwo from "../assets/img/quiz/cricket.jpg";
+import quizThree from "../assets/img/quiz/basketball.jpg";
 
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-const Challenges = () => {
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+const Quiz = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
-      {" "}
       <div id="hero" className="section py-5 jarallax">
         {/* background parallax  */}
 
@@ -337,12 +340,12 @@ const Challenges = () => {
                     className="breadcrumb-item active d-none d-md-block"
                     aria-current="page"
                   >
-                    Challenges
+                    Quiz
                   </li>
                 </ol>
               </nav>
               <div className="mt-0 pt-4 text-center">
-                <h1 className="text-white text-shadow">Challenges</h1>
+                <h1 className="text-white text-shadow">Quiz</h1>
                 <hr className="divider mt-4 mx-auto bg-warning border-warning" />
               </div>
             </Grid>
@@ -350,178 +353,48 @@ const Challenges = () => {
           </Grid>
         </div>
       </div>
-      <div className="new-challenges-section ">
+      {/* End hero  */}
+
+      <div className="quiz-section">
         <Container>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={12}>
-              <h3 className="section-heading animated-twin-lines">
-                TAKE A CHALLENGE
-              </h3>
-            </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
-                  <img
-                    className="card-img-top"
-                    src={challengesOne}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
-                      Alternate Bounce Challenge Table Tennis
-                    </Link>
-                  </h5>
-                </div>
+          <Grid container spacing={2} className="mb-20px">
+            <Grid item xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizOne} alt="" />
+                <p>Fifa Quiz</p>
               </div>
             </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
-                  <img
-                    className="card-img-top"
-                    src={challengesTwo}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
-                      Dribble Challenge Tennis
-                    </Link>
-                  </h5>
-                </div>
+            <Grid item xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizTwo} alt="" />
+                <p>Cricket Quiz</p>
               </div>
             </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
-                  <img
-                    className="card-img-top"
-                    src={challengesThree}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
-                      Alternate Tap Challenge Badminton
-                    </Link>
-                  </h5>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
-                  <img
-                    className="card-img-top"
-                    src={challengesFour}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
-                      Ball Bounce Challenge Cricket
-                    </Link>
-                  </h5>
-                </div>
+            <Grid item xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizThree} alt="" />
+                <p>Basketball Quiz</p>
               </div>
             </Grid>
 
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link href="#" className="gallery-link hover-scale-in">
-                  <img
-                    className="card-img-top"
-                    src={challengesFive}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
-                      Bat Balance Challenge
-                    </Link>
-                  </h5>
-                </div>
+            <Grid item xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizThree} alt="" />
+                <p>Olympics Quiz</p>
               </div>
             </Grid>
 
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link href="#" className="gallery-link hover-scale-in">
-                  <img
-                    className="card-img-top"
-                    src={challengesSix}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
-                      Basketball Single Hand Dribble Challenge
-                    </Link>
-                  </h5>
-                </div>
+            <Grid item xs={6} md={4}>
+              <div className="quizBox">
+                <img src={quizThree} alt="" />
+                <p>Racquet Quiz</p>
               </div>
             </Grid>
-          </Grid>
-        </Container>
-      </div>
-      <div className="new-challenges-section without-white-bg">
-        <Container>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={12}>
-              <h3 className="section-heading animated-twin-lines">
-                GLIMPSES OF PARTICIPATION
-              </h3>
-            </Grid>
+
             <Grid item xs={6} md={4}>
-              <div className="video-box">
-                <iframe
-                  loading="lazy"
-                  title="video-1"
-                  width="100%"
-                  height="200px"
-                  src="https://www.youtube.com/embed/UWMcKTRCjm4?feature=oembed"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={4}>
-              <div className="video-box">
-                <iframe
-                  loading="lazy"
-                  title="video-2"
-                  width="100%"
-                  height="200px"
-                  src="https://www.youtube.com/embed/6kM31Ob3h9s?feature=oembed"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={4}>
-              <div className="video-box">
-                <iframe
-                  loading="lazy"
-                  title="video-3"
-                  width="100%"
-                  height="200px"
-                  src="https://www.youtube.com/embed/qdpG6z_4Fv8?feature=oembed"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+              <div className="quizBox">
+                <img src={quizThree} alt="" />
+                <p>Tennis Quiz</p>
               </div>
             </Grid>
           </Grid>
@@ -531,4 +404,4 @@ const Challenges = () => {
   );
 };
 
-export default Challenges;
+export default Quiz;
