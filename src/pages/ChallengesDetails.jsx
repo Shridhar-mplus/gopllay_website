@@ -242,7 +242,7 @@ const ChallengesDetails = () => {
                           Upload Video
                           <br />
                           <span style={{ color: "red" }}>
-                            [Note: If >= 50 MB, please share the video on
+                            [Note: If greater 50 MB, please share the video on
                             WhatsApp +91 8468930687 (QR Code Below)]
                           </span>
                         </label>

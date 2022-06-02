@@ -10,6 +10,7 @@ import ChallengesDetails from "../pages/ChallengesDetails";
 import Quiz from "../pages/Quiz";
 
 import Contact from "../pages/Contact";
+import TermsConditions from "../pages/TermsConditions";
 import PageNotFound from "../pages/PageNotFound";
 
 function FrontRoutes() {
@@ -28,6 +29,8 @@ function FrontRoutes() {
 
         <Route exact path="/quiz" element={<Quiz />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/terms-conditions" element={<TermsConditions />} />
+
         <Route exact path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
