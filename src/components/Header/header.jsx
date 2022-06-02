@@ -98,7 +98,10 @@ export const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleOpenUserMenu}>
+                <MenuItem
+                  key={page.name}
+                  // onClick={handleOpenUserMenu}
+                >
                   <Typography textAlign="center" href={page.path}>
                     {page.name}
                   </Typography>
@@ -130,7 +133,7 @@ export const ResponsiveAppBar = () => {
               <Link href={page.path}>
                 <Button
                   key={page.name}
-                  onClick={handleOpenUserMenu}
+                  // onClick={handleOpenUserMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page.name}

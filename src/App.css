@@ -992,8 +992,10 @@ label {
 
 .challenges-section{
   padding: 80px 0px;
-  background: url(./assets/img/banners/bg-img.jpg);
-}.quiz-section{
+  background: url(./assets/img/banners/confetti-bg.png);
+  background-size: cover;
+}
+.challenges-section-details,.quiz-section{
   padding: 80px 0px;
   background: #fff;
 }
