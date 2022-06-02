@@ -63,7 +63,10 @@ const Challenges = () => {
             </Grid>
             <Grid item xs={6} md={3}>
               <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
+                <Link
+                  href="/challenges-details"
+                  className="gallery-link hover-scale-in"
+                >
                   <img
                     className="card-img-top"
                     src={challengesOne}
@@ -73,7 +76,7 @@ const Challenges = () => {
                 </Link>
                 <div className="card-body p-3">
                   <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
+                    <Link href="/challenges-details" className="text-reset">
                       Alternate Bounce Challenge Table Tennis
                     </Link>
                   </h5>
@@ -82,7 +85,10 @@ const Challenges = () => {
             </Grid>
             <Grid item xs={6} md={3}>
               <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
+                <Link
+                  href="/challenges-details"
+                  className="gallery-link hover-scale-in"
+                >
                   <img
                     className="card-img-top"
                     src={challengesTwo}
@@ -92,7 +98,7 @@ const Challenges = () => {
                 </Link>
                 <div className="card-body p-3">
                   <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
+                    <Link href="/challenges-details" className="text-reset">
                       Dribble Challenge Tennis
                     </Link>
                   </h5>
@@ -101,7 +107,10 @@ const Challenges = () => {
             </Grid>
             <Grid item xs={6} md={3}>
               <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
+                <Link
+                  href="/challenges-details"
+                  className="gallery-link hover-scale-in"
+                >
                   <img
                     className="card-img-top"
                     src={challengesThree}
@@ -111,7 +120,7 @@ const Challenges = () => {
                 </Link>
                 <div className="card-body p-3">
                   <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
+                    <Link href="/challenges-details" className="text-reset">
                       Alternate Tap Challenge Badminton
                     </Link>
                   </h5>
@@ -120,7 +129,10 @@ const Challenges = () => {
             </Grid>
             <Grid item xs={6} md={3}>
               <div className="card hover-scale overflow-hidden">
-                <Link href="" className="gallery-link hover-scale-in">
+                <Link
+                  href="/challenges-details"
+                  className="gallery-link hover-scale-in"
+                >
                   <img
                     className="card-img-top"
                     src={challengesFour}
@@ -130,7 +142,7 @@ const Challenges = () => {
                 </Link>
                 <div className="card-body p-3">
                   <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
+                    <Link href="/challenges-details" className="text-reset">
                       Ball Bounce Challenge Cricket
                     </Link>
                   </h5>
@@ -140,7 +152,10 @@ const Challenges = () => {
 
             <Grid item xs={6} md={3}>
               <div className="card hover-scale overflow-hidden">
-                <Link href="#" className="gallery-link hover-scale-in">
+                <Link
+                  href="/challenges-details"
+                  className="gallery-link hover-scale-in"
+                >
                   <img
                     className="card-img-top"
                     src={challengesFive}
@@ -150,7 +165,7 @@ const Challenges = () => {
                 </Link>
                 <div className="card-body p-3">
                   <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
+                    <Link href="/challenges-details" className="text-reset">
                       Bat Balance Challenge
                     </Link>
                   </h5>
@@ -160,7 +175,10 @@ const Challenges = () => {
 
             <Grid item xs={6} md={3}>
               <div className="card hover-scale overflow-hidden">
-                <Link href="#" className="gallery-link hover-scale-in">
+                <Link
+                  href="/challenges-details"
+                  className="gallery-link hover-scale-in"
+                >
                   <img
                     className="card-img-top"
                     src={challengesSix}
@@ -170,7 +188,7 @@ const Challenges = () => {
                 </Link>
                 <div className="card-body p-3">
                   <h5 className="mt-1 mb-0">
-                    <Link className="text-reset" href="#">
+                    <Link href="/challenges-details" className="text-reset">
                       Basketball Single Hand Dribble Challenge
                     </Link>
                   </h5>

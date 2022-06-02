@@ -10,6 +10,7 @@ import ChallengesDetails from "../pages/ChallengesDetails";
 import Quiz from "../pages/Quiz";
 
 import Contact from "../pages/Contact";
+import PageNotFound from "../pages/PageNotFound";
 
 function FrontRoutes() {
   return (
@@ -27,6 +28,7 @@ function FrontRoutes() {
 
         <Route exact path="/quiz" element={<Quiz />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );
