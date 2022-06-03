@@ -992,7 +992,7 @@ label {
 
 .challenges-section{
   padding: 80px 0px;
-  background: url(./assets/img/banners/confetti-bg.png);
+  /* background: url(./assets/img/banners/confetti-bg.png); */
   background-size: cover;
 }
 .challenges-section-details,.quiz-section{
@@ -1500,7 +1500,8 @@ img, svg {
 .our-team-section,
 .our-champion-section,
 .new-challenges-section,
-.contact-section {
+.contact-section,
+.event-section {
   padding: 80px 0px;
 }
 .section-heading.text-left{
@@ -1682,7 +1683,7 @@ a.bg-secondary:hover {
   box-shadow: -1px -1px 0px 0px #e2e8f0;
 }
 .mt-20px{
-  margin-top: 20px;
+  margin-top: 20px !important; 
 }
 
 .formBox {
@@ -1717,4 +1718,170 @@ a.bg-secondary:hover {
 .pos-rel{
   position: relative;
   padding-bottom: 10px;
+}
+.event-box{
+  /* border: 2px solid #fff; */
+  border-radius:16px ;
+  overflow: hidden;
+ 
+}
+.event-box a{
+  cursor:pointer;
+}
+.main-event.event-box ,
+.main-event.event-box .img-box,
+.main-event.event-box .img-box img{
+  height: 100%;
+}
+.event-box,
+.event-box .img-box,
+.event-box a{
+  width: 100%;
+}
+.event-box .img-box img{
+  border-radius:16px ;
+  width: 100%;
+  object-fit: cover;
+}
+.event-box-sm .img-box,
+.event-box-sm .img-box img {
+  height: 270px;
+  
+}
+
+
+.drop-shadow {
+  position: relative;
+  float: left;  
+  /* padding: .3em; */
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) , 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -mox-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) , 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) , 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.overlay.event-overlay{
+background: linear-gradient(2deg, #000000 , #00000073 40% );
+border-radius:16px ;
+}
+.event-details{
+
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  /* background: #0000006b; */
+  background: linear-gradient(45deg, #000000d1, #0000001f);
+  border-radius: 16px;
+
+}
+.event-details .event-logo{
+  margin-right:10px;
+}
+.event-details .event-logo img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.event-details .event-content p {
+  margin-bottom: 0px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.event-details .event-content p.name {
+  font-weight: 800;
+  margin-bottom: 3px;
+  font-size: 16px;
+  color: #fef100;
+}
+.venu .fa-map-marker,
+.date .fa.fa-calendar{
+  width: 15px;
+  
+}
+
+.new-challenges-box,
+.new-challenges-box img{
+  border-radius: 16px;
+}
+
+.new-challenges-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 4px;
+  position: relative;
+  box-shadow: 0 0 1.25rem rgb(31 45 61 / 5%);
+  border: 1px solid #e7e7e7;
+}
+.new-challenges-box .challeges-img-box img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: top;
+}
+.new-challenges-box .trophy-icon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  /* padding: 3px; */
+  text-align: center;
+  background: #f8961d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: rgba(0 0 0/10%) 0px 6px 6px;
+}
+.new-challenges-box .challeges-details{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.new-challenges-box .challeges-details p{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+.new-challenges-box .challeges-details p.no-of-participates {
+  font-size: 12px;
+  color: #f8971c;
+}
+
+.view-dashboard-btn {
+  display: block;
+  font-weight: 600;
+  line-height: 1.7;
+  text-decoration: unset;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;  
+  border: 1px solid transparent;
+  color: #fff !important;
+  background: linear-gradient(45deg, #014f8e, #032e62);
+  border-color: #032e62;
+  padding: 0.575rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.view-dashboard-btn .fa-dashboard{
+  margin-right: 5px;
+}
+a{
+  text-decoration:  unset !important;
+}
+.view-dashboard-btn.take-a-challenge-btn{
+  background: #f8971c;
+  border-color: #f8971c;
 }

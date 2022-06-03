@@ -23,7 +23,7 @@ export const Footer = () => {
               <h3>Important Links</h3>
               <ul>
                 <li>
-                  <Link href="/challenges">Challenges</Link>
+                  <Link href="#">Challenges</Link>
                 </li>
                 <li>
                   <Link href="/quiz">Quiz</Link>

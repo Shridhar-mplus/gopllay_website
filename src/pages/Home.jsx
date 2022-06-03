@@ -4,9 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import BannerOne from "../assets/img/home-banner-1.jpg";
 import BannerTwo from "../assets/img/home-banner-2.jpg";
 import BannerThree from "../assets/img/home-banner-3.jpg";
-import challengesOne from "../assets/img/challenges/img-1.jpg";
-import challengesTwo from "../assets/img/challenges/img-2.jpg";
-import challengesThree from "../assets/img/challenges/img-3.jpg";
+import dummyImage from "../assets/img/dummy-image.jpg";
+import CrickEvent from "../assets/img/events/cricket.jpg";
+import badmintonEvent from "../assets/img/events/badminton.jpeg";
+import basketballEvent from "../assets/img/events/basketball.jpg";
+
+import challengesThree from "../assets/img/challenges/basketball-knock-out.jpg";
 import quizOne from "../assets/img/quiz/football.jpg";
 import quizTwo from "../assets/img/quiz/cricket.jpg";
 import quizThree from "../assets/img/quiz/basketball.jpg";
@@ -196,8 +199,233 @@ const Home = () => {
       </Modal>
       {/* Video Modal end*/}
 
+      <div className="event-section">
+        <Container>
+          <Grid container spacing={0}>
+            <Grid item xs={12} md={12}>
+              <h3
+                className="section-heading animated-twin-lines"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="800"
+              >
+                Events
+              </h3>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={8}>
+              <div
+                className="hover-scale main-event event-box drop-shadow curled"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <Link>
+                  <div className="img-box hover-scale-in">
+                    <img src={CrickEvent} alt="" width="100%" />
+                    <div className="overlay event-overlay"></div>
+                  </div>
+                  <div className="event-details">
+                    <div className="event-logo">
+                      <img src={dummyImage} />
+                    </div>
+                    <div className="event-content">
+                      <p className="name">Crick's Champions</p>
+                      <p className="venu">
+                        <i className="fa fa-map-marker" />
+                        V9 - Landmark 203, Second Floor, above HDFC Bank,
+                        Vishrantwadi, Pune, Maharashtra 411015
+                      </p>
+                      <p className="date">
+                        <i className="fa fa-calendar" />
+                        12-June-2022 | <i className="fa fa-calendar" />
+                        18-June-2022
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <div
+                className="hover-scale event-box event-box-sm drop-shadow curled mb-20px"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
+                <Link>
+                  <div className="img-box hover-scale-in">
+                    <img src={basketballEvent} alt="" width="100%" />
+                    <div className="overlay event-overlay"></div>
+                  </div>
+                  <div className="event-details">
+                    <div className="event-logo">
+                      <img src={dummyImage} />
+                    </div>
+                    <div className="event-content">
+                      <p className="name">All Stars Basketball</p>
+                      <p className="venu">
+                        <i className="fa fa-map-marker" />
+                        Pune, Maharashtra 411015
+                      </p>
+                      <p className="date">
+                        <i className="fa fa-calendar" />
+                        12-June-2022 | <i className="fa fa-calendar" />
+                        18-June-2022
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div
+                className="hover-scale event-box drop-shadow curled "
+                data-aos="fade-left"
+                data-aos-duration="2500"
+              >
+                <Link>
+                  <div className="img-box hover-scale-in">
+                    <img src={badmintonEvent} alt="" width="100%" />
+                    <div className="overlay event-overlay"></div>
+                  </div>
+                  <div className="event-details">
+                    <div className="event-logo">
+                      <img src={dummyImage} />
+                    </div>
+                    <div className="event-content">
+                      <p className="name">Badminton Tournament</p>
+                      <p className="venu">
+                        <i className="fa fa-map-marker" />
+                        Pune, Maharashtra 411015
+                      </p>
+                      <p className="date">
+                        <i className="fa fa-calendar" />
+                        12-June-2022 | <i className="fa fa-calendar" />
+                        18-June-2022
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
+
       {/********** Challenges Section Start ***********/}
-      <div className="challenges-section">
+      <div className="challenges-section without-white-bg">
+        <Container>
+          <Grid container spacing={0}>
+            <Grid item xs={12} md={12}>
+              <h3
+                className="section-heading animated-twin-lines"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="800"
+              >
+                Challenges
+              </h3>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={4}>
+              <div
+                className="new-challenges-box "
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-delay="800"
+              >
+                <div className="challeges-img-box">
+                  <img src={challengesThree} alt="" />
+                  <div className="trophy-icon">
+                    <i className="fa fa-trophy" />
+                  </div>
+                </div>
+                <div className="challeges-details">
+                  <p>Knock Out</p>
+                  <p className="no-of-participates">350 Participates</p>
+                  <AnimatePresence>
+                    <motion.div whileHover={{ scale: 0.9 }}>
+                      <Link className="view-dashboard-btn">
+                        <i className="fa fa-dashboard" />
+                        View Dashboard
+                      </Link>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <div
+                className="new-challenges-box "
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-delay="1000"
+              >
+                <div className="challeges-img-box">
+                  <img src={CrickEvent} alt="" />
+                  <div className="trophy-icon">
+                    <i className="fa fa-trophy" />
+                  </div>
+                </div>
+                <div className="challeges-details">
+                  <p>Bat Ballence Challenge</p>
+                  <p className="no-of-participates">350 Participates</p>
+                  <AnimatePresence>
+                    <motion.div whileHover={{ scale: 0.9 }}>
+                      <Link className="view-dashboard-btn take-a-challenge-btn">
+                        Take A Challenge
+                      </Link>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <div
+                className="new-challenges-box "
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-delay="1200"
+              >
+                <div className="challeges-img-box">
+                  <img src={quizOne} alt="" />
+                  <div className="trophy-icon">
+                    <i className="fa fa-trophy" />
+                  </div>
+                </div>
+                <div className="challeges-details">
+                  <p>Wall Hitting</p>
+                  <p className="no-of-participates">350 Participates</p>
+                  <AnimatePresence>
+                    <motion.div whileHover={{ scale: 0.9 }}>
+                      <Link className="view-dashboard-btn">
+                        <i className="fa fa-dashboard" />
+                        View Dashboard
+                      </Link>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <div className=" mt-20px">
+                <AnimatePresence>
+                  <motion.div className="view_more_btn_box">
+                    <motion.div
+                      whileHover={{ scale: 0.9 }}
+                      className="d-inline-block"
+                    >
+                      <Link href="/" className="viewMore ">
+                        VIEW ALL
+                      </Link>
+                    </motion.div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
+      {/* <div className="challenges-section">
         <Container>
           <Grid container spacing={0}>
             <Grid item xs={12} md={12}>
@@ -282,11 +510,11 @@ const Home = () => {
             </div>
           </AnimatePresence>
         </Container>
-      </div>
+      </div> */}
       {/********** Challenges Section End ***********/}
 
       {/**********Quiz Section Start***********/}
-      <div className="quiz-section without-white-bg">
+      <div className="quiz-section">
         <Container>
           <Grid container spacing={0}>
             <Grid item xs={12} md={12}>
@@ -334,19 +562,23 @@ const Home = () => {
                 <p>Basketball Quiz</p>
               </div>
             </Grid>
+            <Grid item xs={12} md={12}>
+              <div className="mt-20px">
+                <AnimatePresence>
+                  <motion.div className="view_more_btn_box ">
+                    <motion.div
+                      whileHover={{ scale: 0.9 }}
+                      className="d-inline-block"
+                    >
+                      <Link href="/" className="viewMore ">
+                        VIEW ALL
+                      </Link>
+                    </motion.div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </Grid>
           </Grid>
-          <AnimatePresence>
-            <motion.div className="view_more_btn_box">
-              <motion.div
-                whileHover={{ scale: 0.9 }}
-                className="d-inline-block"
-              >
-                <Link href="/" className="viewMore">
-                  VIEW ALL
-                </Link>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
         </Container>
       </div>
       {/**********Quiz Section Start***********/}
