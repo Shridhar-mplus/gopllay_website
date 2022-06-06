@@ -53,48 +53,33 @@ const ChallengesDetails = () => {
   return (
     <div>
       {" "}
-      <div id="hero" className="section py-5 jarallax">
-        {/* background parallax  */}
-
-        {/* background overlay  */}
-        <div className="overlay bg-primary opacity-90 z-index-n1"></div>
-
-        {/* rocket moving up animation  */}
-        <Particle />
-        <div id="jarallax-container-0">
-          <img className="jarallax-img" src={Banner} alt="title" />
-        </div>
-        <div className="container">
-          <Grid container spacing={0}>
-            {/* content  */}
-            <Grid item xs={12} md={12}>
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb breadcrumb-dark justify-content-center bg-transparent small mb-0">
-                  <li className="breadcrumb-item">
-                    <Link href="#">Home</Link>
-                  </li>
-                  <li className="breadcrumb-item">
-                    <Link href="/challenges">Challenges</Link>
-                  </li>
-                  <li
-                    className="breadcrumb-item active d-none d-md-block"
-                    aria-current="page"
-                  >
-                    Dribble Challenge Tennis
-                  </li>
-                </ol>
-              </nav>
-              <div className="mt-0 pt-4 text-center">
-                <h1 className="text-white text-shadow">
-                  Dribble Challenge Tennis
-                </h1>
-                <hr className="divider mt-4 mx-auto bg-warning border-warning" />
+      {/* Banner start*/}
+      <div className="challanges-Banner events-Banner">
+        <div className="overlay">
+          <Container className="h-100">
+            <div className="banner-content">
+              <div className="banner-details event-banner-details">
+                <div className="event-name">
+                  <div className="name">Dribble Challenge Tennis</div>
+                </div>
               </div>
-            </Grid>
-            {/* end content  */}
-          </Grid>
+              <div className="banner-buttons">
+                <Link className="">
+                  {" "}
+                  <i className="fa fa-heart-o" />
+                  250
+                </Link>
+                <Link className="">
+                  {" "}
+                  <i className="fa fa-share" />
+                  Share
+                </Link>
+              </div>
+            </div>
+          </Container>
         </div>
       </div>
+      {/* Banner end*/}
       <div className="challenges-section-details">
         <Container>
           <Grid container spacing={2}>
@@ -121,6 +106,22 @@ const ChallengesDetails = () => {
                   racquet.
                 </p>
               </div>
+              <div className="description mt-20px">
+                <h4 className="pos-rel animated-twin-lines ani_left"> Rules</h4>
+                <div className="mt-20px">
+                  <p className=" mb-5px">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <p className="mb-5px">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+
               <div className="leaderboard mt-20px">
                 <h4 className="pos-rel animated-twin-lines ani_left">
                   Leaderboard

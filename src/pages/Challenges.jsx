@@ -1,204 +1,157 @@
 import React from "react";
-
-import Banner from "../assets/img/banners/bg-planet.jpg";
-import challengesOne from "../assets/img/challenges/table-tennis.png";
-import challengesTwo from "../assets/img/challenges/two-racket-tennis-ball-2.png";
+import { AnimatePresence, motion } from "framer-motion";
+import CrickEvent from "../assets/img/events/cricket.jpg";
 import challengesThree from "../assets/img/challenges/Badminton.png";
-import challengesFour from "../assets/img/challenges/cricket-bat-ball.png";
-import challengesFive from "../assets/img/challenges/bat-ball.png";
-import challengesSix from "../assets/img/challenges/basketball-new.jpeg";
+import dummyImage from "../assets/img/dummy-img.png";
 
+import quizOne from "../assets/img/quiz/football.jpg";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import Particle from "../components/Particle/Particle";
 const Challenges = () => {
   return (
     <div>
-      {" "}
-      <div id="hero" className="section py-5 jarallax">
-        {/* background parallax  */}
-
-        {/* background overlay  */}
-        <div className="overlay bg-primary opacity-90 z-index-n1"></div>
-
-        {/* rocket moving up animation  */}
-        <Particle />
-        <div id="jarallax-container-0">
-          <img className="jarallax-img" src={Banner} alt="title" />
-        </div>
-        <div className="container">
-          <Grid container spacing={0}>
-            {/* content  */}
-            <Grid item xs={12} md={12}>
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb breadcrumb-dark justify-content-center bg-transparent small mb-0">
-                  <li className="breadcrumb-item">
-                    <Link href="#">Home</Link>
-                  </li>
-                  <li
-                    className="breadcrumb-item active d-none d-md-block"
-                    aria-current="page"
-                  >
-                    Challenges
-                  </li>
-                </ol>
-              </nav>
-              <div className="mt-0 pt-4 text-center">
-                <h1 className="text-white text-shadow">Challenges</h1>
-                <hr className="divider mt-4 mx-auto bg-warning border-warning" />
+      <div className="challanges-Banner">
+        <div className="overlay">
+          <Container className="h-100">
+            <div className="banner-content">
+              <div className="banner-details">
+                <div className="name">Knock Out</div>
+                <span className="participates">
+                  <i className="fa fa-users mr-6px" />
+                  350 Participates
+                </span>
               </div>
-            </Grid>
-            {/* end content  */}
-          </Grid>
+              <div className="banner-buttons">
+                <Link className="">
+                  {" "}
+                  <i class="fa fa-dashboard"></i> Dashboard
+                </Link>
+                <Link className="">
+                  {" "}
+                  <i className="fa fa-heart-o" />
+                  250
+                </Link>
+                <Link className="">
+                  {" "}
+                  <i className="fa fa-share" />
+                  Share
+                </Link>
+                <Link className="">More Details</Link>
+              </div>
+            </div>
+          </Container>
         </div>
       </div>
+
       <div className="new-challenges-section ">
         <Container>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={12}>
-              <h3 className="section-heading animated-twin-lines">
-                TAKE A CHALLENGE
-              </h3>
+            <Grid item xs={12} md={8}>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <div className="new-challenges-box ">
+                    <div className="challeges-img-box">
+                      <img src={challengesThree} alt="" />
+                      <div className="trophy-icon">
+                        <i className="fa fa-trophy" />
+                      </div>
+                    </div>
+                    <div className="challeges-details">
+                      <p>Knock Out</p>
+                      <p className="no-of-participates">350 Participates</p>
+                      <AnimatePresence>
+                        <motion.div whileHover={{ scale: 0.9 }}>
+                          <Link className="view-dashboard-btn">
+                            <i className="fa fa-dashboard" />
+                            View Dashboard
+                          </Link>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <div className="new-challenges-box ">
+                    <div className="challeges-img-box">
+                      <img src={CrickEvent} alt="" />
+                      {/* <div className="trophy-icon">
+                    <i className="fa fa-trophy" />
+                  </div> */}
+                    </div>
+                    <div className="challeges-details">
+                      <p>Bat Ballence Challenge</p>
+                      <p className="no-of-participates">350 Participates</p>
+                      <AnimatePresence>
+                        <motion.div whileHover={{ scale: 0.9 }}>
+                          <Link className="view-dashboard-btn take-a-challenge-btn">
+                            Take A Challenge
+                          </Link>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <div className="new-challenges-box ">
+                    <div className="challeges-img-box">
+                      <img src={quizOne} alt="" />
+                      <div className="trophy-icon">
+                        <i className="fa fa-trophy" />
+                      </div>
+                    </div>
+                    <div className="challeges-details">
+                      <p>Wall Hitting</p>
+                      <p className="no-of-participates">350 Participates</p>
+                      <AnimatePresence>
+                        <motion.div whileHover={{ scale: 0.9 }}>
+                          <Link className="view-dashboard-btn">
+                            <i className="fa fa-dashboard" />
+                            View Dashboard
+                          </Link>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <div className="new-challenges-box ">
+                    <div className="challeges-img-box">
+                      <img src={quizOne} alt="" />
+                      <div className="trophy-icon">
+                        <i className="fa fa-trophy" />
+                      </div>
+                    </div>
+                    <div className="challeges-details">
+                      <p>Wall Hitting</p>
+                      <p className="no-of-participates">350 Participates</p>
+                      <AnimatePresence>
+                        <motion.div whileHover={{ scale: 0.9 }}>
+                          <Link className="view-dashboard-btn">
+                            <i className="fa fa-dashboard" />
+                            View Dashboard
+                          </Link>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link
-                  href="/challenges-details"
-                  className="gallery-link hover-scale-in"
-                >
-                  <img
-                    className="card-img-top"
-                    src={challengesOne}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link href="/challenges-details" className="text-reset">
-                      Alternate Bounce Challenge Table Tennis
-                    </Link>
-                  </h5>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link
-                  href="/challenges-details"
-                  className="gallery-link hover-scale-in"
-                >
-                  <img
-                    className="card-img-top"
-                    src={challengesTwo}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link href="/challenges-details" className="text-reset">
-                      Dribble Challenge Tennis
-                    </Link>
-                  </h5>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link
-                  href="/challenges-details"
-                  className="gallery-link hover-scale-in"
-                >
-                  <img
-                    className="card-img-top"
-                    src={challengesThree}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link href="/challenges-details" className="text-reset">
-                      Alternate Tap Challenge Badminton
-                    </Link>
-                  </h5>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link
-                  href="/challenges-details"
-                  className="gallery-link hover-scale-in"
-                >
-                  <img
-                    className="card-img-top"
-                    src={challengesFour}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link href="/challenges-details" className="text-reset">
-                      Ball Bounce Challenge Cricket
-                    </Link>
-                  </h5>
-                </div>
-              </div>
-            </Grid>
-
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link
-                  href="/challenges-details"
-                  className="gallery-link hover-scale-in"
-                >
-                  <img
-                    className="card-img-top"
-                    src={challengesFive}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link href="/challenges-details" className="text-reset">
-                      Bat Balance Challenge
-                    </Link>
-                  </h5>
-                </div>
-              </div>
-            </Grid>
-
-            <Grid item xs={6} md={3}>
-              <div className="card hover-scale overflow-hidden">
-                <Link
-                  href="/challenges-details"
-                  className="gallery-link hover-scale-in"
-                >
-                  <img
-                    className="card-img-top"
-                    src={challengesSix}
-                    title=""
-                    alt=""
-                  />
-                </Link>
-                <div className="card-body p-3">
-                  <h5 className="mt-1 mb-0">
-                    <Link href="/challenges-details" className="text-reset">
-                      Basketball Single Hand Dribble Challenge
-                    </Link>
-                  </h5>
-                </div>
-              </div>
+            <Grid item xs={12} md={4}>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={12} className="mt-16px">
+                  <img src={dummyImage} alt="Ads" className="ads" />
+                </Grid>
+                <Grid item xs={12} md={12} className="mt-16px">
+                  <img src={dummyImage} alt="Ads" className="ads" />
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
       </div>
-      <div className="new-challenges-section without-white-bg">
+      {/* <div className="new-challenges-section without-white-bg">
         <Container>
           <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
@@ -244,7 +197,7 @@ const Challenges = () => {
             </Grid>
           </Grid>
         </Container>
-      </div>
+      </div> */}
     </div>
   );
 };

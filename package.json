@@ -1,6 +1,7 @@
 {
   "name": "gopllay_website",
   "version": "0.1.0",
+  "homepage": "https://cmsweb.m-staging.in",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",

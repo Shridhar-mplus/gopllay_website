@@ -15,7 +15,8 @@ import Link from "@mui/material/Link";
 const pages = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Challeges", path: "#" },
+  { name: "Events", path: "/events" },
+  { name: "Challeges", path: "/challenges" },
   { name: "Quiz", path: "/quiz" },
   { name: "Contact", path: "/contact" },
 ];
@@ -102,7 +103,7 @@ export const ResponsiveAppBar = () => {
                   key={page.name}
                   // onClick={handleOpenUserMenu}
                 >
-                  <Typography textAlign="center" href={page.path}>
+                  <Typography textAlign="center" href={page.path} color="black">
                     {page.name}
                   </Typography>
                 </MenuItem>

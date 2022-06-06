@@ -4,7 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import BannerOne from "../assets/img/home-banner-1.jpg";
 import BannerTwo from "../assets/img/home-banner-2.jpg";
 import BannerThree from "../assets/img/home-banner-3.jpg";
-import dummyImage from "../assets/img/dummy-image.jpg";
+
+import BadmintonIcon from "../assets/img/icons/Badminton.png";
+import CricketIcon from "../assets/img/icons/Cricket.png";
+import BasketballIcon from "../assets/img/icons/Basketball.png";
+
 import CrickEvent from "../assets/img/events/cricket.jpg";
 import badmintonEvent from "../assets/img/events/badminton.jpeg";
 import basketballEvent from "../assets/img/events/basketball.jpg";
@@ -199,6 +203,7 @@ const Home = () => {
       </Modal>
       {/* Video Modal end*/}
 
+      {/* Event start*/}
       <div className="event-section">
         <Container>
           <Grid container spacing={0}>
@@ -227,7 +232,7 @@ const Home = () => {
                   </div>
                   <div className="event-details">
                     <div className="event-logo">
-                      <img src={dummyImage} />
+                      <img src={CricketIcon} />
                     </div>
                     <div className="event-content">
                       <p className="name">Crick's Champions</p>
@@ -259,7 +264,7 @@ const Home = () => {
                   </div>
                   <div className="event-details">
                     <div className="event-logo">
-                      <img src={dummyImage} />
+                      <img src={BasketballIcon} />
                     </div>
                     <div className="event-content">
                       <p className="name">All Stars Basketball</p>
@@ -288,7 +293,7 @@ const Home = () => {
                   </div>
                   <div className="event-details">
                     <div className="event-logo">
-                      <img src={dummyImage} />
+                      <img src={BadmintonIcon} />
                     </div>
                     <div className="event-content">
                       <p className="name">Badminton Tournament</p>
@@ -306,9 +311,26 @@ const Home = () => {
                 </Link>
               </div>
             </Grid>
+            <Grid item xs={12} md={12}>
+              <div className=" mt-20px">
+                <AnimatePresence>
+                  <motion.div className="view_more_btn_box">
+                    <motion.div
+                      whileHover={{ scale: 0.9 }}
+                      className="d-inline-block"
+                    >
+                      <Link href="/events" className="viewMore ">
+                        VIEW ALL
+                      </Link>
+                    </motion.div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </Grid>
           </Grid>
         </Container>
       </div>
+      {/* Event end*/}
 
       {/********** Challenges Section Start ***********/}
       <div className="challenges-section without-white-bg">
@@ -362,9 +384,9 @@ const Home = () => {
               >
                 <div className="challeges-img-box">
                   <img src={CrickEvent} alt="" />
-                  <div className="trophy-icon">
+                  {/* <div className="trophy-icon">
                     <i className="fa fa-trophy" />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="challeges-details">
                   <p>Bat Ballence Challenge</p>
@@ -414,7 +436,7 @@ const Home = () => {
                       whileHover={{ scale: 0.9 }}
                       className="d-inline-block"
                     >
-                      <Link href="/" className="viewMore ">
+                      <Link href="/challenges" className="viewMore ">
                         VIEW ALL
                       </Link>
                     </motion.div>
@@ -425,92 +447,6 @@ const Home = () => {
           </Grid>
         </Container>
       </div>
-      {/* <div className="challenges-section">
-        <Container>
-          <Grid container spacing={0}>
-            <Grid item xs={12} md={12}>
-              <h3
-                className="section-heading animated-twin-lines"
-                data-aos="zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="800"
-              >
-                Challenges
-              </h3>
-            </Grid>
-          </Grid>
-          <Grid container spacing={0} className="cus-box-shadow mb-20px">
-            <Grid item xs={6} md={3} className="no-right no-left">
-              <div
-                className="challenges-list "
-                data-aos="fade-right"
-                data-aos-duration="1500"
-              >
-                <div className="challengesBox">
-                  <img src={challengesOne} alt="Challenges" />
-                  <p>Alternate Tap Challenge Badminton</p>
-                </div>
-                <div className="challengesBox">
-                  <img src={challengesTwo} alt="Challenges" />
-                  <p>Ball Bounce Challenge Cricket</p>
-                </div>
-                <div className="challengesBox">
-                  <img src={challengesThree} alt="Challenges" />
-                  <p>Basketball Single Hand Dribble Challenge</p>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={9} className="no-left no-right">
-              <div
-                className="challenges-box"
-                data-aos="fade-left"
-                data-aos-duration="1500"
-              >
-                <Grid container spacing={0}>
-                  <Grid item xs={12} md={12}>
-                    <p className="main-title">
-                      Alternate Tap Challenge Badminton
-                    </p>
-                    <div className="challenges-description">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    </div>
-                  </Grid>
-                </Grid>
-                <div></div>
-              </div>
-            </Grid>
-          </Grid>
-          <AnimatePresence>
-            <div className="view_more_btn_box">
-              <motion.div
-                whileHover={{ scale: 0.9 }}
-                className="d-inline-block"
-              >
-                <Link href="/" className="viewMore">
-                  VIEW ALL
-                </Link>
-              </motion.div>
-            </div>
-          </AnimatePresence>
-        </Container>
-      </div> */}
       {/********** Challenges Section End ***********/}
 
       {/**********Quiz Section Start***********/}
