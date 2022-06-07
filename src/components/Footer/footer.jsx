@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div className="footer-dark">
       <footer>
-        <Container>
+        <Container className="pad-top-bottom-30px">
           <Grid container spacing={2}>
             <Grid item xs={12} md={3} className="item text">
               <h3>

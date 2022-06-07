@@ -50,7 +50,7 @@ export const ResponsiveAppBar = () => {
   return (
     <AppBar position={scroll ? "fixed" : "relative"} className="HeaderBgColor">
       <Container>
-        <Toolbar disableGutters>
+        <Toolbar disableGutters className="al-space-btn">
           <Typography
             variant="h6"
             noWrap

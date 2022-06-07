@@ -1,7 +1,6 @@
 import Banner from "../assets/img/banners/bg-planet.jpg";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
 
 import Particle from "../components/Particle/Particle";
 const TermsConditions = () => {

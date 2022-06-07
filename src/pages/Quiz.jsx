@@ -10,6 +10,8 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Particle from "../components/Particle/Particle";
 
+import QuizBox from "../components/Quiz/quizBox";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Quiz = () => {
@@ -62,43 +64,25 @@ const Quiz = () => {
         <Container>
           <Grid container spacing={2} className="mb-20px">
             <Grid item xs={6} md={4}>
-              <div className="quizBox">
-                <img src={quizOne} alt="" />
-                <p>Fifa Quiz</p>
-              </div>
+              <QuizBox quizImg={quizOne} quizName="Fifa Quiz" />
             </Grid>
             <Grid item xs={6} md={4}>
-              <div className="quizBox">
-                <img src={quizTwo} alt="" />
-                <p>Cricket Quiz</p>
-              </div>
+              <QuizBox quizImg={quizTwo} quizName="Cricket Quiz" />
             </Grid>
             <Grid item xs={6} md={4}>
-              <div className="quizBox">
-                <img src={quizThree} alt="" />
-                <p>Basketball Quiz</p>
-              </div>
+              <QuizBox quizImg={quizThree} quizName="Basketball Quiz" />
             </Grid>
 
             <Grid item xs={6} md={4}>
-              <div className="quizBox">
-                <img src={quizThree} alt="" />
-                <p>Olympics Quiz</p>
-              </div>
+              <QuizBox quizImg={quizThree} quizName="Olympics Quiz" />
             </Grid>
 
             <Grid item xs={6} md={4}>
-              <div className="quizBox">
-                <img src={quizThree} alt="" />
-                <p>Racquet Quiz</p>
-              </div>
+              <QuizBox quizImg={quizThree} quizName="Racquet Quiz" />
             </Grid>
 
             <Grid item xs={6} md={4}>
-              <div className="quizBox">
-                <img src={quizThree} alt="" />
-                <p>Tennis Quiz</p>
-              </div>
+              <QuizBox quizImg={quizThree} quizName="Tennis Quiz" />
             </Grid>
           </Grid>
         </Container>

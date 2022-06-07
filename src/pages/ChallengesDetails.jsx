@@ -96,10 +96,7 @@ const ChallengesDetails = () => {
               </div>
 
               <div className="description mt-20px">
-                <h4 className="pos-rel animated-twin-lines ani_left">
-                  {" "}
-                  Description
-                </h4>
+                <h4 className="pos-rel "> Description:</h4>
                 <p className="mt-20px">
                   Maximum number of continuous dribbles to the ground in 30
                   seconds using your forehand without losing contact with the
@@ -107,7 +104,7 @@ const ChallengesDetails = () => {
                 </p>
               </div>
               <div className="description mt-20px">
-                <h4 className="pos-rel animated-twin-lines ani_left"> Rules</h4>
+                <h4 className="pos-rel "> Rules:</h4>
                 <div className="mt-20px">
                   <p className=" mb-5px">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -123,9 +120,7 @@ const ChallengesDetails = () => {
               </div>
 
               <div className="leaderboard mt-20px">
-                <h4 className="pos-rel animated-twin-lines ani_left">
-                  Leaderboard
-                </h4>
+                <h4 className="pos-rel ">Leaderboard:</h4>
                 <TableContainer component={Paper} className="mt-20px">
                   <Table sx={{ minWidth: 700 }} aria-label="customized table">
                     <TableHead>
@@ -156,9 +151,7 @@ const ChallengesDetails = () => {
             </Grid>
             <Grid item xs={12} md={4}>
               <div className="formBox">
-                <h4 className="pos-rel animated-twin-lines ani_left">
-                  Participates
-                </h4>
+                <h4 className="pos-rel ">Participates:</h4>
                 <ul className="ul-bullets mt-20px">
                   <li>
                     {" "}
