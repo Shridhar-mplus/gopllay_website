@@ -60,7 +60,7 @@ const ChallengesDetails = () => {
             <div className="banner-content">
               <div className="banner-details event-banner-details">
                 <div className="event-name">
-                  <div className="name">Dribble Challenge Tennis</div>
+                  <div className="name">Knock Out</div>
                 </div>
               </div>
               <div className="banner-buttons">

@@ -51,89 +51,97 @@ const Challenges = () => {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                   <div className="new-challenges-box ">
-                    <div className="challeges-img-box">
-                      <img src={challengesThree} alt="" />
-                      <div className="trophy-icon">
-                        <i className="fa fa-trophy" />
+                    <Link href="/challenges-details">
+                      <div className="challeges-img-box">
+                        <img src={challengesThree} alt="" />
+                        <div className="trophy-icon">
+                          <i className="fa fa-trophy" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="challeges-details">
-                      <p>Knock Out</p>
-                      <p className="no-of-participates">350 Participates</p>
-                      <AnimatePresence>
-                        <motion.div whileHover={{ scale: 0.9 }}>
-                          <Link className="view-dashboard-btn">
-                            <i className="fa fa-dashboard" />
-                            View Dashboard
-                          </Link>
-                        </motion.div>
-                      </AnimatePresence>
-                    </div>
+                      <div className="challeges-details">
+                        <p>Knock Out</p>
+                        <p className="no-of-participates">350 Participates</p>
+                        <AnimatePresence>
+                          <motion.div whileHover={{ scale: 0.9 }}>
+                            <Link className="view-dashboard-btn">
+                              <i className="fa fa-dashboard" />
+                              View Dashboard
+                            </Link>
+                          </motion.div>
+                        </AnimatePresence>
+                      </div>
+                    </Link>
                   </div>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <div className="new-challenges-box ">
-                    <div className="challeges-img-box">
-                      <img src={CrickEvent} alt="" />
-                      {/* <div className="trophy-icon">
+                    <Link href="/challenges-details">
+                      <div className="challeges-img-box">
+                        <img src={CrickEvent} alt="" />
+                        {/* <div className="trophy-icon">
                     <i className="fa fa-trophy" />
                   </div> */}
-                    </div>
-                    <div className="challeges-details">
-                      <p>Bat Ballence Challenge</p>
-                      <p className="no-of-participates">350 Participates</p>
-                      <AnimatePresence>
-                        <motion.div whileHover={{ scale: 0.9 }}>
-                          <Link className="view-dashboard-btn take-a-challenge-btn">
-                            Take A Challenge
-                          </Link>
-                        </motion.div>
-                      </AnimatePresence>
-                    </div>
+                      </div>
+                      <div className="challeges-details">
+                        <p>Bat Ballence Challenge</p>
+                        <p className="no-of-participates">350 Participates</p>
+                        <AnimatePresence>
+                          <motion.div whileHover={{ scale: 0.9 }}>
+                            <Link className="view-dashboard-btn take-a-challenge-btn">
+                              Take A Challenge
+                            </Link>
+                          </motion.div>
+                        </AnimatePresence>
+                      </div>
+                    </Link>
                   </div>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <div className="new-challenges-box ">
-                    <div className="challeges-img-box">
-                      <img src={quizOne} alt="" />
-                      <div className="trophy-icon">
-                        <i className="fa fa-trophy" />
+                    <Link href="/challenges-details">
+                      <div className="challeges-img-box">
+                        <img src={quizOne} alt="" />
+                        <div className="trophy-icon">
+                          <i className="fa fa-trophy" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="challeges-details">
-                      <p>Wall Hitting</p>
-                      <p className="no-of-participates">350 Participates</p>
-                      <AnimatePresence>
-                        <motion.div whileHover={{ scale: 0.9 }}>
-                          <Link className="view-dashboard-btn">
-                            <i className="fa fa-dashboard" />
-                            View Dashboard
-                          </Link>
-                        </motion.div>
-                      </AnimatePresence>
-                    </div>
+                      <div className="challeges-details">
+                        <p>Wall Hitting</p>
+                        <p className="no-of-participates">350 Participates</p>
+                        <AnimatePresence>
+                          <motion.div whileHover={{ scale: 0.9 }}>
+                            <Link className="view-dashboard-btn">
+                              <i className="fa fa-dashboard" />
+                              View Dashboard
+                            </Link>
+                          </motion.div>
+                        </AnimatePresence>
+                      </div>
+                    </Link>
                   </div>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <div className="new-challenges-box ">
-                    <div className="challeges-img-box">
-                      <img src={quizOne} alt="" />
-                      <div className="trophy-icon">
-                        <i className="fa fa-trophy" />
+                    <Link href="/challenges-details">
+                      <div className="challeges-img-box">
+                        <img src={quizOne} alt="" />
+                        <div className="trophy-icon">
+                          <i className="fa fa-trophy" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="challeges-details">
-                      <p>Wall Hitting</p>
-                      <p className="no-of-participates">350 Participates</p>
-                      <AnimatePresence>
-                        <motion.div whileHover={{ scale: 0.9 }}>
-                          <Link className="view-dashboard-btn">
-                            <i className="fa fa-dashboard" />
-                            View Dashboard
-                          </Link>
-                        </motion.div>
-                      </AnimatePresence>
-                    </div>
+                      <div className="challeges-details">
+                        <p>Wall Hitting</p>
+                        <p className="no-of-participates">350 Participates</p>
+                        <AnimatePresence>
+                          <motion.div whileHover={{ scale: 0.9 }}>
+                            <Link className="view-dashboard-btn">
+                              <i className="fa fa-dashboard" />
+                              View Dashboard
+                            </Link>
+                          </motion.div>
+                        </AnimatePresence>
+                      </div>
+                    </Link>
                   </div>
                 </Grid>
               </Grid>
