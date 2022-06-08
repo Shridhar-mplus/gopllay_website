@@ -1,8 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "@mui/material/Button";
-
-import Banner from "../assets/img/banners/bg-planet.jpg";
 import QRCode from "../assets/img/WhatsApp-QR-Code.jpeg";
 
 import Link from "@mui/material/Link";
@@ -17,7 +15,6 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-import Particle from "../components/Particle/Particle";
 const ChallengesDetails = () => {
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {

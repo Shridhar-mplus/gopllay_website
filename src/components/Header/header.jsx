@@ -133,8 +133,8 @@ export const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Link href={page.path}>
                 <Button
+                  className="mainMeun"
                   key={page.name}
-                  // onClick={handleOpenUserMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page.name}

@@ -10,7 +10,7 @@ const eventBox = (props) => {
           : "hover-scale event-box event-box-sm drop-shadow curled"
       }
     >
-      <Link href="#">
+      <Link href="/event-details">
         <div className="img-box hover-scale-in">
           <img src={props.eventImg} alt="" width="100%" />
           <div className="overlay event-overlay"></div>

@@ -34,16 +34,17 @@ const Events = () => {
                       <i className="fa fa-map-marker mr-6px" />
                       Pune, Maharashtra 411015
                     </span>
+                    <div>
+                      <p className="date">
+                        <i className="fa fa-calendar"></i>12-June-2022 |{" "}
+                        <i className="fa fa-calendar"></i>18-June-2022
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <p className="date">
-                    <i className="fa fa-calendar"></i>12-June-2022 |{" "}
-                    <i className="fa fa-calendar"></i>18-June-2022
-                  </p>
                 </div>
               </div>
               <div className="banner-buttons">
+                {/* <Link className=""> Team And Score</Link> */}
                 <Link className="">
                   {" "}
                   <i className="fa fa-heart-o" />

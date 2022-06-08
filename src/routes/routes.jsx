@@ -1,19 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
-
 import About from "../pages/About";
-
 import Events from "../pages/Events";
-
+import EventDetails from "../pages/EventDetails";
 import Challenges from "../pages/Challenges";
 import ChallengesDetails from "../pages/ChallengesDetails";
-
 import Quiz from "../pages/Quiz";
 import QuizDetails from "../pages/QuizDetails";
-
 import Contact from "../pages/Contact";
-
 import TermsConditions from "../pages/TermsConditions";
 import PageNotFound from "../pages/PageNotFound";
 
@@ -25,6 +20,7 @@ function FrontRoutes() {
         <Route exact path="/about" element={<About />} />
 
         <Route exact path="/events" element={<Events />} />
+        <Route exact path="/event-details" element={<EventDetails />} />
 
         <Route exact path="/challenges" element={<Challenges />} />
         <Route

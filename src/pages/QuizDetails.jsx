@@ -74,101 +74,93 @@ const quizDetails = () => {
         </div>
       </div>
       {/* Banner end*/}
-      <div className="challenges-section-details">
+      <div className="challenges-section-details for-challenges-section-details">
         <Container>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={8}>
-              <div className="video-box">
-                <iframe
-                  loading="lazy"
-                  title="video-1"
-                  width="100%"
-                  height="350px"
-                  src="https://www.youtube.com/embed/UWMcKTRCjm4?feature=oembed"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                />
-              </div>
-
-              <div className="description mt-20px">
-                <h4 className="pos-rel "> Wellcome to GoPllay Quiz</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-              </div>
-              <div className="description mt-20px">
-                <h4 className="pos-rel "> Rules:</h4>
-                <ul className="rule-bullet">
-                  <li>
-                    <p className=" mb-5px">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                  </li>
-                  <li>
-                    <p className="mb-5px">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className=" mt-20px">
-                <AnimatePresence>
-                  <motion.div className="view_more_btn_box ">
-                    <motion.div
-                      whileHover={{ scale: 0.9 }}
-                      className="d-inline-block"
-                    >
-                      <Link href="/events" className="viewMore testBtn">
-                        Take A Test
-                      </Link>
+            <Grid item xs={12} md={9}>
+              <div className="event-details-box">
+                <div className="description mt-20px">
+                  <h4 className="pos-rel "> Wellcome to GoPllay Quiz</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                </div>
+                <div className="description mt-20px">
+                  <h4 className="pos-rel "> Rules</h4>
+                  <ul className="rule-bullet">
+                    <li>
+                      <p className=" mb-5px">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </li>
+                    <li>
+                      <p className="mb-5px">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div className=" mt-20px">
+                  <AnimatePresence>
+                    <motion.div className="view_more_btn_box ">
+                      <motion.div
+                        whileHover={{ scale: 0.9 }}
+                        className="d-inline-block"
+                      >
+                        <Link href="/events" className="viewMore testBtn">
+                          Take A Test
+                        </Link>
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+                  </AnimatePresence>
+                </div>
 
-              <div className="leaderboard mt-20px">
-                <h4 className="pos-rel ">Leaderboard:</h4>
-                <TableContainer component={Paper} className="mt-20px">
-                  <Table sx={{ minWidth: 700 }} aria-label="customized table">
-                    <TableHead>
-                      <TableRow>
-                        <StyledTableCell>Rank</StyledTableCell>
-                        <StyledTableCell align="left">Name</StyledTableCell>
-                        <StyledTableCell align="left">
-                          Score (%)
-                        </StyledTableCell>
-                        <StyledTableCell align="left">Time</StyledTableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      {rows.map((row) => (
-                        <StyledTableRow key={row.name}>
-                          <StyledTableCell component="th" scope="row">
-                            {row.rank}
-                          </StyledTableCell>
+                <div className="leaderboard mt-20px">
+                  <h4 className="pos-rel ">Leaderboard</h4>
+                  <TableContainer component={Paper} className="mt-20px">
+                    <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                      <TableHead>
+                        <TableRow>
+                          <StyledTableCell>Rank</StyledTableCell>
+                          <StyledTableCell align="left">Name</StyledTableCell>
                           <StyledTableCell align="left">
-                            {row.name}
+                            Score (%)
                           </StyledTableCell>
-                          <StyledTableCell align="left">
-                            {row.score}
-                          </StyledTableCell>
-                          <StyledTableCell align="left">
-                            {row.time}
-                          </StyledTableCell>
-                        </StyledTableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
+                          <StyledTableCell align="left">Time</StyledTableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows.map((row) => (
+                          <StyledTableRow key={row.name}>
+                            <StyledTableCell component="th" scope="row">
+                              {row.rank}
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              {row.name}
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              {row.score}
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              {row.time}
+                            </StyledTableCell>
+                          </StyledTableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </div>
               </div>
             </Grid>
+            <Grid item xs={12} md={3}></Grid>
           </Grid>
         </Container>
       </div>
