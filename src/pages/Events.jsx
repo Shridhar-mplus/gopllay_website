@@ -12,7 +12,7 @@ import CrickEvent from "../assets/img/events/cricket.jpg";
 import badmintonEvent from "../assets/img/events/badminton.jpeg";
 import basketballEvent from "../assets/img/events/basketball.jpg";
 
-import EventBox from "../components/Event/eventBox";
+import EventBox from "../components/Box/eventBox";
 
 const Events = () => {
   return (
@@ -74,6 +74,7 @@ const Events = () => {
                     eventLocation="Pune, Maharashtra 411015"
                     eventStartDate="12-June-2022"
                     eventEndDate="16-June-2022"
+                    eventBoxType="small"
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -84,6 +85,7 @@ const Events = () => {
                     eventLocation="Pune, Maharashtra 411015"
                     eventStartDate="12-June-2022"
                     eventEndDate="16-June-2022"
+                    eventBoxType="small"
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -94,6 +96,7 @@ const Events = () => {
                     eventLocation="Pune, Maharashtra 411015"
                     eventStartDate="12-June-2022"
                     eventEndDate="16-June-2022"
+                    eventBoxType="small"
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -104,6 +107,7 @@ const Events = () => {
                     eventLocation="Pune, Maharashtra 411015"
                     eventStartDate="12-June-2022"
                     eventEndDate="16-June-2022"
+                    eventBoxType="small"
                   />
                 </Grid>
               </Grid>
@@ -116,7 +120,7 @@ const Events = () => {
                   </div>
                 </Grid>
                 <Grid item xs={12} md={12}>
-                  <div className="mt-16px">
+                  <div>
                     <img src={dummyImage} alt="Ads" className="ads event-ads" />
                   </div>
                 </Grid>

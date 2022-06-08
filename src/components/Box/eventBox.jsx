@@ -3,7 +3,13 @@ import Link from "@mui/material/Link";
 const eventBox = (props) => {
   console.log("props..............", props);
   return (
-    <div className="hover-scale event-box event-box-sm drop-shadow curled mb-20px">
+    <div
+      className={
+        props.eventBoxType === "large"
+          ? "hover-scale main-event event-box drop-shadow curled"
+          : "hover-scale event-box event-box-sm drop-shadow curled"
+      }
+    >
       <Link href="#">
         <div className="img-box hover-scale-in">
           <img src={props.eventImg} alt="" width="100%" />

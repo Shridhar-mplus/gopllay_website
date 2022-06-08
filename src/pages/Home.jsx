@@ -34,6 +34,10 @@ import "react-awesome-slider/dist/styles.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import ChallengeBox from "../components/Box/challengeBox";
+import QuizBox from "../components/Box/quizBox";
+import EventBox from "../components/Box/eventBox";
+
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 const style = {
   position: "absolute",
@@ -221,95 +225,51 @@ const Home = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} md={8}>
               <div
-                className="hover-scale main-event event-box drop-shadow curled"
+                className="ht-100"
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                <Link>
-                  <div className="img-box hover-scale-in">
-                    <img src={CrickEvent} alt="" width="100%" />
-                    <div className="overlay event-overlay"></div>
-                  </div>
-                  <div className="event-details">
-                    <div className="event-logo">
-                      <img src={CricketIcon} />
-                    </div>
-                    <div className="event-content">
-                      <p className="name">Crick's Champions</p>
-                      <p className="venu">
-                        <i className="fa fa-map-marker" />
-                        V9 - Landmark 203, Second Floor, above HDFC Bank,
-                        Vishrantwadi, Pune, Maharashtra 411015
-                      </p>
-                      <p className="date">
-                        <i className="fa fa-calendar" />
-                        12-June-2022 | <i className="fa fa-calendar" />
-                        18-June-2022
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+                <EventBox
+                  eventImg={CrickEvent}
+                  eventIcon={CricketIcon}
+                  eventName="Crick's Champions"
+                  eventLocation="Pune, Maharashtra 411015"
+                  eventStartDate="12-June-2022"
+                  eventEndDate="16-June-2022"
+                  eventBoxType="large"
+                />
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
-              <div
-                className="hover-scale event-box event-box-sm drop-shadow curled mb-20px"
-                data-aos="fade-left"
-                data-aos-duration="2000"
-              >
-                <Link>
-                  <div className="img-box hover-scale-in">
-                    <img src={basketballEvent} alt="" width="100%" />
-                    <div className="overlay event-overlay"></div>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={12} className="mb-20px">
+                  <div data-aos="fade-left" data-aos-duration="2000">
+                    <EventBox
+                      eventImg={basketballEvent}
+                      eventIcon={BasketballIcon}
+                      eventName="All Stars Basketball"
+                      eventLocation="Pune, Maharashtra 411015"
+                      eventStartDate="12-June-2022"
+                      eventEndDate="16-June-2022"
+                      eventBoxType="small"
+                    />
                   </div>
-                  <div className="event-details">
-                    <div className="event-logo">
-                      <img src={BasketballIcon} />
-                    </div>
-                    <div className="event-content">
-                      <p className="name">All Stars Basketball</p>
-                      <p className="venu">
-                        <i className="fa fa-map-marker" />
-                        Pune, Maharashtra 411015
-                      </p>
-                      <p className="date">
-                        <i className="fa fa-calendar" />
-                        12-June-2022 | <i className="fa fa-calendar" />
-                        18-June-2022
-                      </p>
-                    </div>
+                </Grid>
+                <Grid item xs={12} md={12} className="mb-20px">
+                  {" "}
+                  <div data-aos="fade-left" data-aos-duration="2500">
+                    <EventBox
+                      eventImg={badmintonEvent}
+                      eventIcon={BadmintonIcon}
+                      eventName="Badminton Tournament"
+                      eventLocation="Pune, Maharashtra 411015"
+                      eventStartDate="12-June-2022"
+                      eventEndDate="16-June-2022"
+                      eventBoxType="small"
+                    />
                   </div>
-                </Link>
-              </div>
-              <div
-                className="hover-scale event-box drop-shadow curled "
-                data-aos="fade-left"
-                data-aos-duration="2500"
-              >
-                <Link>
-                  <div className="img-box hover-scale-in">
-                    <img src={badmintonEvent} alt="" width="100%" />
-                    <div className="overlay event-overlay"></div>
-                  </div>
-                  <div className="event-details">
-                    <div className="event-logo">
-                      <img src={BadmintonIcon} />
-                    </div>
-                    <div className="event-content">
-                      <p className="name">Badminton Tournament</p>
-                      <p className="venu">
-                        <i className="fa fa-map-marker" />
-                        Pune, Maharashtra 411015
-                      </p>
-                      <p className="date">
-                        <i className="fa fa-calendar" />
-                        12-June-2022 | <i className="fa fa-calendar" />
-                        18-June-2022
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
+                </Grid>
+              </Grid>
             </Grid>
             <Grid item xs={12} md={12}>
               <div className=" mt-20px">
@@ -350,88 +310,44 @@ const Home = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
               <div
-                className="new-challenges-box "
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-delay="800"
               >
-                <Link href="/challenges-details">
-                  <div className="challeges-img-box">
-                    <img src={challengesThree} alt="" />
-                    <div className="trophy-icon">
-                      <i className="fa fa-trophy" />
-                    </div>
-                  </div>
-                  <div className="challeges-details">
-                    <p>Knock Out</p>
-                    <p className="no-of-participates">350 Participates</p>
-                    <AnimatePresence>
-                      <motion.div whileHover={{ scale: 0.9 }}>
-                        <Link className="view-dashboard-btn">
-                          <i className="fa fa-dashboard" />
-                          View Dashboard
-                        </Link>
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-                </Link>
+                <ChallengeBox
+                  challengeImg={challengesThree}
+                  challengeName="Knock Out"
+                  challengeParticipates="350 Participates"
+                  isChallengeAccepted="true"
+                />
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div
-                className="new-challenges-box "
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-delay="1000"
               >
-                <Link href="/challenges-details">
-                  <div className="challeges-img-box">
-                    <img src={CrickEvent} alt="" />
-                    {/* <div className="trophy-icon">
-                    <i className="fa fa-trophy" />
-                  </div> */}
-                  </div>
-                  <div className="challeges-details">
-                    <p>Bat Ballence Challenge</p>
-                    <p className="no-of-participates">350 Participates</p>
-                    <AnimatePresence>
-                      <motion.div whileHover={{ scale: 0.9 }}>
-                        <Link className="view-dashboard-btn take-a-challenge-btn">
-                          Take A Challenge
-                        </Link>
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-                </Link>
+                <ChallengeBox
+                  challengeImg={CrickEvent}
+                  challengeName="Bat Ballence Challenge"
+                  challengeParticipates="350 Participates"
+                  isChallengeAccepted="false"
+                />
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div
-                className="new-challenges-box "
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-delay="1200"
               >
-                <Link href="/challenges-details">
-                  <div className="challeges-img-box">
-                    <img src={quizOne} alt="" />
-                    <div className="trophy-icon">
-                      <i className="fa fa-trophy" />
-                    </div>
-                  </div>
-                  <div className="challeges-details">
-                    <p>Wall Hitting</p>
-                    <p className="no-of-participates">350 Participates</p>
-                    <AnimatePresence>
-                      <motion.div whileHover={{ scale: 0.9 }}>
-                        <Link className="view-dashboard-btn">
-                          <i className="fa fa-dashboard" />
-                          View Dashboard
-                        </Link>
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-                </Link>
+                <ChallengeBox
+                  challengeImg={quizOne}
+                  challengeName="Wall Hitting"
+                  challengeParticipates="350 Participates"
+                  isChallengeAccepted="true"
+                />
               </div>
             </Grid>
             <Grid item xs={12} md={12}>
@@ -473,35 +389,29 @@ const Home = () => {
           <Grid container spacing={2} className="mb-20px">
             <Grid item xs={6} md={4}>
               <div
-                className="quizBox"
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-delay="800"
               >
-                <img src={quizOne} alt="" />
-                <p>Fifa Quiz</p>
+                <QuizBox quizImg={quizOne} quizName="Fifa Quiz" />
               </div>
             </Grid>
             <Grid item xs={6} md={4}>
               <div
-                className="quizBox"
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-delay="1000"
               >
-                <img src={quizTwo} alt="" />
-                <p>Cricket Quiz</p>
+                <QuizBox quizImg={quizTwo} quizName="Cricket Quiz" />
               </div>
             </Grid>
             <Grid item xs={6} md={4}>
               <div
-                className="quizBox"
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-delay="1200"
               >
-                <img src={quizThree} alt="" />
-                <p>Basketball Quiz</p>
+                <QuizBox quizImg={quizThree} quizName="Basketball Quiz" />
               </div>
             </Grid>
             <Grid item xs={12} md={12}>

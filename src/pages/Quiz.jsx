@@ -10,7 +10,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Particle from "../components/Particle/Particle";
 
-import QuizBox from "../components/Quiz/quizBox";
+import QuizBox from "../components/Box/quizBox";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
