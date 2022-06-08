@@ -25,10 +25,7 @@ const Challenges = () => {
                 </span>
               </div>
               <div className="banner-buttons">
-                <Link className="">
-                  {" "}
-                  <i class="fa fa-dashboard"></i> Dashboard
-                </Link>
+                <Link className=""> Dashboard</Link>
                 <Link className="">
                   {" "}
                   <i className="fa fa-heart-o" />

@@ -22,18 +22,21 @@ const Events = () => {
         <div className="overlay">
           <Container className="h-100">
             <div className="banner-content">
-              <div className="banner-details event-banner-details">
-                <div className="event-logo">
-                  <img src={CricketIcon} />
+              <div className="banner-details ">
+                <div className="event-banner-details">
+                  <div className="event-logo">
+                    <img src={CricketIcon} />
+                  </div>
+
+                  <div className="event-name">
+                    <div className="name">Crick's Champions</div>
+                    <span className="participates">
+                      <i className="fa fa-map-marker mr-6px" />
+                      Pune, Maharashtra 411015
+                    </span>
+                  </div>
                 </div>
-
-                <div className="event-name">
-                  <div className="name">Crick's Champions</div>
-                  <span className="participates">
-                    <i className="fa fa-map-marker mr-6px" />
-                    Pune, Maharashtra 411015
-                  </span>
-
+                <div>
                   <p className="date">
                     <i className="fa fa-calendar"></i>12-June-2022 |{" "}
                     <i className="fa fa-calendar"></i>18-June-2022
@@ -41,9 +44,6 @@ const Events = () => {
                 </div>
               </div>
               <div className="banner-buttons">
-                <Link className="">
-                  <i className="fa fa-dashboard"></i> Dashboard
-                </Link>
                 <Link className="">
                   {" "}
                   <i className="fa fa-heart-o" />
@@ -61,9 +61,14 @@ const Events = () => {
         </div>
       </div>
       {/* Banner end*/}
+
+      {/* Event List start*/}
       <div className="event-section">
         <Container>
           <Grid container spacing={2}>
+            <Grid item xs={12} md={12}>
+              <h3 className="page-heading ">Events</h3>
+            </Grid>
             <Grid item xs={12} md={8}>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
@@ -129,6 +134,7 @@ const Events = () => {
           </Grid>
         </Container>
       </div>
+      {/* Event List End */}
     </div>
   );
 };
